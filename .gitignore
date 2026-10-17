@@ -1,0 +1,17 @@
+# Dataset binario autodescargable
+cat.npz
+*.npz
+
+# Checkpoints y modelos intermedios grandes
+*.pth
+
+# Python & Jupyter cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Scripts auxiliares temporales
+build_notebook.py
+run_pipeline.py
+test_render.png
