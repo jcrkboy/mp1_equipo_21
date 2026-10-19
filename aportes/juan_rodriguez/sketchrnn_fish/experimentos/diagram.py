@@ -65,19 +65,21 @@ def draw(path, conv_channels=128, conv_layers=2, kernel=3, hidden=512, layers=1,
     arrow(ax, (cx, 5.85), (cx, 5.45))
     box(ax, X0, 4.9, W, 0.55, f"Dropout (p = {dropout})", C_RNN, fs=11)
     xr, xp = X0 + 1.85, X0 + W - 1.85                     # centros de las dos ramas
-    arrow(ax, (xr, 4.9), (xr, 4.45))
-    arrow(ax, (xp, 4.9), (xp, 4.45))
-    box(ax, X0, 2.95, 3.7, 1.5,
+    arrow(ax, (xr, 4.9), (xr, 4.62))
+    arrow(ax, (xp, 4.9), (xp, 4.62))
+    box(ax, X0, 2.82, 3.7, 1.8,
         "Cabeza de regresión\n"
         f"Linear({hidden} → 6·{n_mix} = {6 * n_mix})\n"
         "$\\pi_k$ (softmax),  $\\mu_{x,k},\\ \\mu_{y,k}$\n"
-        "$\\sigma_{x,k},\\ \\sigma_{y,k}$ (softplus),  $\\rho_k$ (tanh)", C_REG, fs=10.5)
-    box(ax, X0 + W - 3.7, 2.95, 3.7, 1.5,
+        "$\\sigma_{x,k},\\ \\sigma_{y,k}$ (softplus),  $\\rho_k$ (tanh)\n"
+        "Salidas: $\\Delta\\hat{x}_t,\\ \\Delta\\hat{y}_t = \\Sigma_k\\, \\pi_k \\mu_k$", C_REG, fs=10)
+    box(ax, X0 + W - 3.7, 2.82, 3.7, 1.8,
         "Cabeza de clasificación\n"
         f"Linear({hidden} → 3)\n"
-        "logits de pen_state\n(lápiz abajo / fin trazo / fin dibujo)", C_PEN, fs=10.5)
-    arrow(ax, (xr, 2.95), (xr, 2.55))
-    arrow(ax, (xp, 2.95), (xp, 2.55))
+        "logits de pen_state\n(lápiz abajo / fin trazo / fin dibujo)\n"
+        "Salida: $\\widehat{pen}_t$ (clase más probable)", C_PEN, fs=10)
+    arrow(ax, (xr, 2.82), (xr, 2.55))
+    arrow(ax, (xp, 2.82), (xp, 2.55))
     box(ax, X0, 1.4, 3.7, 1.15,
         "Pérdidas de regresión\n"
         "$\\mathcal{L}_{NLL} = -\\log \\Sigma_k\\, \\pi_k\\, \\mathcal{N}(\\Delta x_t, \\Delta y_t \\mid \\mu_k, \\sigma_k, \\rho_k)$\n"
@@ -98,8 +100,8 @@ def draw(path, conv_channels=128, conv_layers=2, kernel=3, hidden=512, layers=1,
     for bx, txt in [(0.15, "Objetivo\n$(\\Delta x_t,\\ \\Delta y_t)$\n(normalizado)"),
                     (X0 + W + 0.3, "Objetivo\n$pen_t \\in \\{0, 1, 2\\}$\n(clase)")]:
         box(ax, bx, 1.4, 2.15, 1.15, txt, C_IN, fs=10)
-        box(ax, bx, 2.95, 2.15, 1.5, "$Y$ = punto $t$\n(la entrada $X$\ndesplazada\nun paso)", C_IN, fs=10)
-        arrow(ax, (bx + 1.075, 2.95), (bx + 1.075, 2.55))
+        box(ax, bx, 2.82, 2.15, 1.8, "$Y$ = punto $t$\n(la entrada $X$\ndesplazada\nun paso)", C_IN, fs=10)
+        arrow(ax, (bx + 1.075, 2.82), (bx + 1.075, 2.55))
     arrow(ax, (2.3, 1.97), (X0, 1.97))
     arrow(ax, (X0 + W + 0.3, 1.97), (X0 + W, 1.97))
     box(ax, X0 + W + 0.3, 0.02, 2.15, 1.15,

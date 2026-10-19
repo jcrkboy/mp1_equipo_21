@@ -1,10 +1,19 @@
 # Conv-LSTM fish — aporte de Juan Felipe Rodríguez
 
+## Integrantes del equipo
+
+Equipo 21:
+
+1. Juan Javier Valera Mejias
+2. Juan David Villalba Guavita
+3. Juan Felipe Rodriguez Granados
+4. Leidy Dayana Vega Medina
+
 ## Estado del aporte
 
 El notebook fue ejecutado de principio a fin en CPU (portátil con
-procesador i7 de 12.ª generación), sin errores. Dos ejecuciones completas
-dieron exactamente las mismas métricas.
+procesador i7 de 12.ª generación), sin errores. Las ejecuciones completas
+que se hicieron dieron exactamente las mismas métricas.
 
 Antes de fijar el modelo se compararon 39 configuraciones, cuyos
 resultados están en la carpeta `experimentos/`. El conjunto de prueba
