@@ -172,6 +172,12 @@ Las generaciones son reconocibles como peces, pero algunas tienen trazos
 de más o contornos abiertos. Las métricas a un paso no miden directamente
 la calidad de la generación autorregresiva.
 
+La prueba de completar bocetos a partir del primer trazo real dio
+resultados irregulares: en 3 o 4 de 8 casos el modelo agrega detalles
+coherentes (ojo, boca o cola), pero en los demás los trazos nuevos quedan
+desplazados o superpuestos. El modelo se entrenó para dibujar desde el
+punto inicial y no para continuar un trazo dado.
+
 Cada configuración se entrenó con una sola semilla y las rondas cortas
 usaron 15 épocas, lo que puede perjudicar a modelos que convergen más
 lento, como el Transformer.
