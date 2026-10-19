@@ -79,7 +79,7 @@ ponderada del estado del lápiz. Los pesos de clase son proporcionales a
 | Peso del término MSE / de la entropía cruzada | 1 / 3 |
 
 La mejor época fue la 48 y la parada temprana se activó en la época 56.
-El entrenamiento tardó 28.7 minutos en CPU.
+El entrenamiento tardó 39.6 minutos en CPU.
 
 ## Experimentos realizados
 
@@ -200,6 +200,6 @@ trazos.
 El notebook descarga el dataset público, entrena el modelo desde cero y
 guarda los tres PNG y los pesos (`modelo_convlstm_fish.pt`) en la carpeta
 de trabajo. No necesita pesos preentrenados. Si hay GPU disponible la usa
-automáticamente; en CPU el entrenamiento tarda alrededor de 30 minutos.
+automáticamente; en CPU el entrenamiento tarda entre 30 y 40 minutos.
 
 Dependencias: torch, numpy, pandas, matplotlib, scikit-learn.
