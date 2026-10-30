@@ -11,7 +11,7 @@ después de un finetuning completo sobre código Python.
 
 ## Archivo principal
 
-`Microproyecto2_JuanDavidVillalba_Entrega.ipynb`
+`Microproyecto2_Entrega.ipynb`
 
 El notebook contiene la preparación del corpus, la implementación del GPT,
 los finetunings, la evaluación comparativa, nueve ejemplos cualitativos
