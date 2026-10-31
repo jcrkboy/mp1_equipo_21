@@ -1,0 +1,6 @@
+# Se ignora todo lo que está en la raíz...
+/*
+
+# ...salvo este archivo y el entregable (notebook y HTML)
+!/.gitignore
+!/Entregable_MAIA_MAPLN_Microproyecto_1.*
