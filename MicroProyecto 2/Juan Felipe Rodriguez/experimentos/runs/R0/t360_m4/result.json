@@ -1,0 +1,27 @@
+{
+ "id": "t360_m4",
+ "round": "R0",
+ "cfg": {
+  "kind": "HuggingFaceTB/SmolLM2-360M",
+  "epochs": 1.0,
+  "lr": 5e-05,
+  "micro_batch": 4,
+  "grad_accum": 4,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.1,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "checkpointing": true,
+  "mode": "timing",
+  "updates": 8
+ },
+ "n_params": 361821120,
+ "secs_per_block": 0.11551464907824993,
+ "min_per_epoch": 20.802263054841507,
+ "secs": 16.452723264694214,
+ "max_mem_gb": 6.956683158874512,
+ "max_reserved_gb": 7.572265625
+}

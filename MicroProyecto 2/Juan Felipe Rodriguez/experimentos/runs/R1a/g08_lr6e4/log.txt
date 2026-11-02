@@ -1,0 +1,13 @@
+18:27:12 inicio R1a/g08_lr6e4: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.0006, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:27:32 step 135/1350 ep 0.20 train 6.8583 val 5.1370 ppl 170.206 19s
+18:27:51 step 270/1350 ep 0.40 train 4.8897 val 4.5291 ppl 92.671 38s
+18:28:10 step 405/1350 ep 0.60 train 4.4149 val 4.1282 ppl 62.069 57s
+18:28:29 step 540/1350 ep 0.80 train 4.1019 val 3.8689 ppl 47.891 76s
+18:28:48 step 675/1350 ep 1.00 train 3.8556 val 3.6867 ppl 39.912 96s
+18:29:07 step 810/1350 ep 1.20 train 3.6045 val 3.5660 ppl 35.374 115s
+18:29:26 step 945/1350 ep 1.40 train 3.5097 val 3.4675 ppl 32.058 134s
+18:29:46 step 1080/1350 ep 1.60 train 3.4347 val 3.4083 ppl 30.214 153s
+18:30:05 step 1215/1350 ep 1.80 train 3.3649 val 3.3818 ppl 29.423 172s
+18:30:24 step 1350/1350 ep 2.00 train 3.3386 val 3.3758 ppl 29.248 191s
+18:30:28 validacion completa: perplejidad 32.121 (nll 3.4695, 346290 tokens)
+18:30:28 fin R1a/g08_lr6e4: 3.3 min, memoria 4.46 GB

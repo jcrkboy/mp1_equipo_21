@@ -1,0 +1,8 @@
+03:25:05 inicio R2a/f08_lote32: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 0.5, 'lr': 0.0001, 'micro_batch': 4, 'grad_accum': 8, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True}
+03:26:40 step 34/169 ep 0.10 train 1.7214 val 1.7092 ppl 5.525 93s
+03:28:14 step 68/169 ep 0.20 train 1.6619 val 1.6777 ppl 5.353 188s
+03:29:49 step 102/169 ep 0.30 train 1.6538 val 1.6576 ppl 5.247 282s
+03:31:22 step 136/169 ep 0.40 train 1.6373 val 1.6480 ppl 5.196 376s
+03:32:54 step 169/169 ep 0.50 train 1.6383 val 1.6461 ppl 5.187 467s
+03:33:12 validacion completa: perplejidad 5.238 (nll 1.6559, 346290 tokens)
+03:33:12 fin R2a/f08_lote32: 8.1 min, memoria 5.37 GB

@@ -1,0 +1,126 @@
+{
+ "id": "b360",
+ "round": "R0",
+ "cfg": {
+  "kind": "HuggingFaceTB/SmolLM2-360M",
+  "epochs": 1.0,
+  "lr": 5e-05,
+  "micro_batch": 4,
+  "grad_accum": 4,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.1,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "checkpointing": true,
+  "mode": "baseline",
+  "sampling": true
+ },
+ "n_params": 361821120,
+ "val_ppl": 4.579983279503867,
+ "val_nll": 1.5216953473560817,
+ "n_tokens": 346290,
+ "sampling": [
+  {
+   "temperature": 0.0,
+   "valid": 63.0,
+   "ended": 2.0,
+   "unique_lines": 84.0664708564338,
+   "secs": 52.78105044364929,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op\nfrom alembic.utils import get_revision\n\ndef get_revision_from_file(file_path):\n    \"\"\"\n    Get the revision from a file.\n    \"\"\"\n    with open(file_path, 'r') as f:\n        revision = f.read()\n    return get_revision(revision)\n\ndef get_revision_from_file_with_revision(file_path, revision):\n    \"\"\"\n    Get the revision from a file.\n    \"\"\"\n    with open(file_path, 'r') as f:\n        revision = f.read()",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\n#\n#  This is the main package for curses support for Python.  Normally used by\n#  importing the package, and perhaps a particular module inside it.\n#\n\n#\n#  This is the main package for curses support for Python.  Normally used by\n#  importing the package, and perhaps a particular module inside it.\n#\n\n#\n#  This is the main package for curses support for Python.  Normally used by\n#  importing the package, and perhaps a particular module inside it.\n#\n\n#",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.django.models import Course\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog\nfrom xmodule.modulestore.django.models import CourseImportLog"
+   ]
+  },
+  {
+   "temperature": 0.5,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 57.49999999999999,
+   "ended": 2.0,
+   "unique_lines": 88.25597655694116,
+   "secs": 53.33710432052612,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, op_exec, op_invoke, op_create_file\nfrom alembic.filesystem import Path, File, FileSystem\nfrom alembic.util import get_version, get_version_file\nfrom alembic.util import get_version_file_path\n\n# the path to the file with the version info.\nversion_file_path = 'version.txt'\nversion_file = get_version_file_path(version_file_path)\n\n# the version info for the file.\nversion = get_version(version_file)",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef _curses_init(win, mode=0):\n    \"\"\"\n    Initializes the curses window.\n\n    Parameters\n    ----------\n    win : win32win, curses.win\n\n    mode : int, 0 or 1\n        The mode for the window.  The default is 0.\n    \"\"\"\n    if mode == 0:\n        win.move(0, 0)\n        win.refresh()\n        win.getkey()\n    elif mode == 1:\n        win.move(0, 0)\n        win.refresh()\n        win.getch()\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.django.models import Course\nfrom xmodule.modulestore.django.models import CourseLog\n\nfrom xmodule.test_utils import get_logger\n\n\nlogger = get_logger(__name__)\n\n\nclass Command(BaseCommand):\n    \"\"\"\n    Class to import courseware from git/xml\n    \"\"\"\n\n    help = \"Import courseware from git/xml\"\n\n    def add_arguments(self, parser):\n        \"\"\"\n        Add arguments for this command\n        \"\"\"\n        parser.add_argument(\"git_path\", default=\"git/\")"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 53.0,
+   "ended": 2.5,
+   "unique_lines": 90.0924155289936,
+   "secs": 53.55489635467529,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, engine\nfrom alembic.base import BaseEngine\nfrom alembic.base import BaseFileSystem\nfrom alembic.base import BaseHook\nfrom alembic.base import BaseVersion\nfrom alembic.base import BaseFile\n\n# Create the engine.\nengine = engine.Engine(\n    file_system=BaseFileSystem(),\n    hooks=[BaseHook()],\n    version=BaseVersion(),\n    revision=revision,\n    down_revision=down_revision)\n\n# Create a file system for the database.",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef do_exit(stdscr, mode=0):\n    \"\"\"\n    Exit from curses, or do a cleanup of windows and the like.\n\n    :param stdscr: the window object\n    :param mode: the mode to exit to\n    :return: 0 if successful, 1 otherwise\n    \"\"\"\n    try:\n        sys.exit(mode)\n    except:\n        pass\n    try:\n        _os.remove(stdscr.stdscr)\n    except:\n        pass\n\ndef get_curses_mode(stdscr, mode):\n    \"\"\"",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.import import (\n    CourseImportLogMeta,\n    CourseImportLog\n)\n\nfrom dashboard.data.mongo_test import (\n    MongoTest,\n    MongoTestMeta,\n    MongoTestMetaField,\n    MongoTestMetaFieldType,\n    MongoTestMetaFieldTypeList\n)\nfrom dashboard.data.mongo_test import (\n    MongoTestMeta,\n    MongoTestMetaField,\n    MongoTestMetaFieldType,\n    MongoTestMetaFieldTypeList\n)\nfrom dashboard.data.mongo_test import (\n    MongoTestMeta,\n    MongoTestMetaField,"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 55.50000000000001,
+   "ended": 5.5,
+   "unique_lines": 90.37562436389058,
+   "secs": 53.70974564552307,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, engine\nfrom alembic.base import BaseEngine\nfrom alembic.base import Hooks\n\n# create the backend engine.\nengine.setbackend(BaseEngine)\n\n# create the hooks.\nhooks = Hooks(engine)\nhooks.addh('index', index)\n\n# create the webhook hook.\nwebhook = engine.createhook(hooks)\nwebhook.addhook('index')\n\n# create the webhook.\nwebhook = engine.createwebhook(hooks)\nwebhook.addhook('index')\n",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef do_exit(fd=None, mode=0):\n    \"\"\"\n    The main function, which will be called when this script is run as a\n    subprocess.  Exit with the given output and status.\n\n    @param fd: The standard output file descriptor that is closed by this\n        function.  If it is None, the standard error file descriptor is\n        used instead.\n    @param mode: The status of this exit and whether it is successful.\n    \"\"\"\n    curses.wrapper(do_main)\n\ndef do_main(fd=None, mode=0):\n    \"\"\"",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.module import Module\nfrom xmodule.modulestore.models.course import Course\n\n# ------------------ FILEDIR_PATH -----------------\nFILEDIR_PATH = \"/home/w2012/Courses/Git/Modules\"\n\n# ---------------------- MANAGED MAIN PROCESS ----------------\nclass MyCommand(BaseCommand):\n    \"\"\"\n    Main process handling, this command is managed by the Django Admin\n    \"\"\"\n    def add_arguments(self, parser):\n        parser.add_argument('-i', '--import', required=True,"
+   ]
+  },
+  {
+   "temperature": 1.0,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 51.5,
+   "ended": 5.5,
+   "unique_lines": 92.4272104234424,
+   "secs": 53.67678761482239,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, engine\nfrom yaml import safe_load\nimport json\nfrom collections import OrderedDict\n\n# import some common module:\nfrom jsonutils.utils.compat_json import as_json\n\n\nclass EventProcessor(op.Process):\n    \"\"\"\n    Implementation of the EventProcessor\n    This is the most basic handler of the event engine\n    It simply parses the data and logs it to disk.\n    \"\"\"\n\n    @op.process\n    def handle(self, data, name, version, key=None):\n        \"\"\"Executed handler for simple event models \"\"\"\n\n        data = safe_load(data)\n",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef do_exit (_fd=None, mode=0):\n    \"\"\"\n    The default behavior is to close (the fd), and do an _exit.  This\n    will be useful if the script is under another process (or another\n        shell)!  (Note: there is no _exit call from 'init.py' itself, so the\n        next call to do_exit in the script could exit the script from\n        outside using exit(0).)\n    \"\"\"\n\n    try:\n        os.close(_fd)\n\n    except OSError: # not handled by system call?\n        pass\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.module import Module\nfrom xmodule.modulestore.models.course import Course\n\ncourse_list_path = \"courses\"\n\ndef import_log(log_type):\n    \"\"\"\n    Method to import a courselog\n    \"\"\"\n    course_list_path = os.path.join(course_list_path, '{log_type}.xml'.format(log_type=log_type))\n\n    if not os.path.isfile(course_list_path):\n        raise CommandError('Import log does not exist. Please create log.')\n"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 0,
+   "top_p": 0.9,
+   "valid": 56.99999999999999,
+   "ended": 1.0,
+   "unique_lines": 88.49125681050731,
+   "secs": 54.743234634399414,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, engine\nfrom alembic.base import BaseEngine\nfrom alembic.logger import logger\nfrom alembic.util import path_to_file\n\n\nclass WebHookEngine(BaseEngine):\n    \"\"\"WebHookEngine\"\"\"\n\n    def __init__(self, webhooks):\n        \"\"\"Initialize the WebHookEngine.\n\n        :param webhooks: The WebHook table.\n        \"\"\"\n        super(WebHookEngine, self).__init__()\n        self.webhooks = webhooks\n\n    def get_webhook_table(self):",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef _curses_init(win, mode=0):\n    \"\"\"\n    Initialise curses, passing the win (and possibly the mode).\n    \"\"\"\n    # Make the window's position\n    win.move(0, 0)\n\n    # Make the window's colour\n    win.box(0, 0, 0)\n\n    # Make the window's background\n    win.box(0, 0, 0)\n\n    # Set the colour of the background\n    win.setbkcolor(0, 0, 0)\n\n    # Set the colour of the cursor",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models import Modules\nfrom xmodule.modulestore.models import Module\n\nfrom dashboard.models import ImportLog\nfrom dashboard.models import Course\nfrom dashboard.models import Module\n\n\nclass Command(BaseCommand):\n    \"\"\"Import courseware from git/xml into a modulestore\"\"\"\n    help = \"Import courseware from git/xml into a modulestore\"\n\n    def add_arguments(self, parser):\n        \"\"\"Add arguments to command\"\"\"\n        parser.add_argument(\"git_path\", type=str, help=\"Git path to import from\")"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 0,
+   "top_p": 0.95,
+   "valid": 56.49999999999999,
+   "ended": 3.0,
+   "unique_lines": 89.50812307528864,
+   "secs": 54.701921463012695,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, engine\nfrom alembic.base import BaseEngine\nfrom alembic.logger import logger\nfrom alembic.util import path_to_function\n\n\nclass WebHookEngine(BaseEngine):\n    \"\"\"Define a webhook engine and load the webhooks.\n\n    Parameters\n    ----------\n    base_path : str\n        The base path to the project folder.\n    webhook_path : str\n        Path to the webhook folder.\n\n    Attributes\n    ----------\n    base_path : str\n        Base path to the project folder.\n    webhook_path : str\n        Path to the webhook folder.",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute_proc(cmd, stdin=None, stdout=None, stderr=None, cmd_stdin=None,\n                 cmd_stdout=None, cmd_stderr=None, returncode=0):\n    \"\"\"\n    Execute a command and return its return code.  If cmd_stdin is specified,\n    then the command will be executed with the STDOUT and STDERR stdin/stdout\n    and stderr objects specified, otherwise the default stdout/stderr is used.\n    \"\"\"\n    stdout = sys.stdout\n    if stdout is None:\n        stdout = sys.stderr",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models import Modules\nfrom xmodule.modulestore.models import Module\n\nfrom dashboard.data.mongo_test import dump_mongo_test_db, test_db_exists\n\nlogger = logging.getLogger(__name__)\n\n\nclass Command(BaseCommand):\n    \"\"\"\n    Command for importing courses and modules from Git repository\n    \"\"\"\n\n    help = \"Import courses and modules from Git repository\"\n\n    def add_arguments(self, parser):\n        parser.add_argument('git_url',\n            default=\"git://github.com/xmodule/xmodule.git\","
+   ]
+  }
+ ],
+ "secs": 421.95709443092346,
+ "max_mem_gb": 5.100225925445557,
+ "max_reserved_gb": 8.5078125
+}

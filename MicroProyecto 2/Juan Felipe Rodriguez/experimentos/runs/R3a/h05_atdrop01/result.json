@@ -1,0 +1,77 @@
+{
+ "id": "h05_atdrop01",
+ "round": "R3a",
+ "cfg": {
+  "kind": "HuggingFaceTB/SmolLM2-360M",
+  "epochs": 0.5,
+  "lr": 0.0001,
+  "micro_batch": 4,
+  "grad_accum": 4,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.1,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "checkpointing": true,
+  "attention_dropout": 0.1
+ },
+ "n_params": 361821120,
+ "hist": [
+  {
+   "step": 68,
+   "epoch": 0.10074074074074074,
+   "train_loss": NaN,
+   "val_loss": 1.628888786764706,
+   "val_ppl": 5.09820637535046,
+   "lr": 9.393697555307581e-05,
+   "secs": 128.50558423995972
+  },
+  {
+   "step": 136,
+   "epoch": 0.20148148148148148,
+   "train_loss": NaN,
+   "val_loss": 1.754110715379902,
+   "val_ppl": 5.77830689700468,
+   "lr": 6.992005449231208e-05,
+   "secs": 256.0224084854126
+  },
+  {
+   "step": 204,
+   "epoch": 0.3022222222222222,
+   "train_loss": NaN,
+   "val_loss": 1.755180721507353,
+   "val_ppl": 5.78449302980055,
+   "lr": 3.7452140067090935e-05,
+   "secs": 382.1497552394867
+  },
+  {
+   "step": 272,
+   "epoch": 0.40296296296296297,
+   "train_loss": NaN,
+   "val_loss": 1.755174378638174,
+   "val_ppl": 5.784456339634356,
+   "lr": 1.0307598681440617e-05,
+   "secs": 508.51223969459534
+  },
+  {
+   "step": 338,
+   "epoch": 0.5007407407407407,
+   "train_loss": NaN,
+   "val_loss": 1.7551977395450367,
+   "val_ppl": 5.784591471358551,
+   "lr": 2.379712904426734e-09,
+   "secs": 631.4590058326721
+  }
+ ],
+ "best_step": 68,
+ "best_monitor_nll": 1.628888786764706,
+ "train_secs": 632.8754317760468,
+ "val_ppl": NaN,
+ "val_nll": NaN,
+ "n_tokens": 346290,
+ "secs": 666.9950938224792,
+ "max_mem_gb": 7.933784484863281,
+ "max_reserved_gb": 13.71875
+}

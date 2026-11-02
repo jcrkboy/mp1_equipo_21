@@ -1,0 +1,406 @@
+{
+ "id": "largo_g08_lr6e4",
+ "round": "R1b",
+ "cfg": {
+  "kind": "gpt",
+  "n_layer": 6,
+  "n_head": 8,
+  "n_embd": 384,
+  "dropout": 0.1,
+  "tie": true,
+  "pos": "learned",
+  "epochs": 6.0,
+  "lr": 0.0006,
+  "micro_batch": 16,
+  "grad_accum": 1,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.2,
+  "clip": 1.0,
+  "resegment": true,
+  "seed": 0,
+  "eval_batch": 32,
+  "patience_evals": 8,
+  "sampling": true
+ },
+ "n_params": 29611008,
+ "hist": [
+  {
+   "step": 135,
+   "epoch": 0.2,
+   "train_loss": 7.6840103643911855,
+   "val_loss": 5.575167221966912,
+   "val_ppl": 263.7936640442493,
+   "lr": 0.0004009900990099009,
+   "secs": 18.99032163619995
+  },
+  {
+   "step": 270,
+   "epoch": 0.4,
+   "train_loss": 5.137132492771855,
+   "val_loss": 4.671884765625,
+   "val_ppl": 106.89903230217868,
+   "lr": 0.0005995512936744831,
+   "secs": 38.21258568763733
+  },
+  {
+   "step": 405,
+   "epoch": 0.6,
+   "train_loss": 4.479087545253613,
+   "val_loss": 4.209863491881127,
+   "val_ppl": 67.34734572312136,
+   "lr": 0.0005959295813882247,
+   "secs": 57.34456777572632
+  },
+  {
+   "step": 540,
+   "epoch": 0.8,
+   "train_loss": 4.122111793800636,
+   "val_loss": 3.9147039962469363,
+   "val_ppl": 50.13422939442638,
+   "lr": 0.0005887166173747645,
+   "secs": 76.46675825119019
+  },
+  {
+   "step": 675,
+   "epoch": 1.0,
+   "train_loss": 3.929899892100581,
+   "val_loss": 3.7070341030943625,
+   "val_ppl": 40.73281785727908,
+   "lr": 0.0005779999345172635,
+   "secs": 95.57166624069214
+  },
+  {
+   "step": 810,
+   "epoch": 1.2,
+   "train_loss": 3.596995735168457,
+   "val_loss": 3.587531192555147,
+   "val_ppl": 36.14473130278758,
+   "lr": 0.0005639095850586961,
+   "secs": 114.69476962089539
+  },
+  {
+   "step": 945,
+   "epoch": 1.4,
+   "train_loss": 3.5089291890462238,
+   "val_loss": 3.4672909390318627,
+   "val_ppl": 32.04979986969398,
+   "lr": 0.0005466165623536044,
+   "secs": 133.810448884964
+  },
+  {
+   "step": 1080,
+   "epoch": 1.6,
+   "train_loss": 3.4400937221668384,
+   "val_loss": 3.3770754059436277,
+   "val_ppl": 29.284999016079134,
+   "lr": 0.0005263307257792327,
+   "secs": 152.9227147102356
+  },
+  {
+   "step": 1215,
+   "epoch": 1.8,
+   "train_loss": 3.3404869750693993,
+   "val_loss": 3.2779744561887254,
+   "val_ppl": 26.521996789069657,
+   "lr": 0.0005032982539882647,
+   "secs": 172.00943303108215
+  },
+  {
+   "step": 1350,
+   "epoch": 2.0,
+   "train_loss": 3.263574322947749,
+   "val_loss": 3.196621706495098,
+   "val_ppl": 24.449791945424817,
+   "lr": 0.000477798657409205,
+   "secs": 191.1372890472412
+  },
+  {
+   "step": 1485,
+   "epoch": 2.2,
+   "train_loss": 3.0060569374649613,
+   "val_loss": 3.1491141524969364,
+   "val_ppl": 23.315401539905245,
+   "lr": 0.00045014138624918724,
+   "secs": 210.24144077301025
+  },
+  {
+   "step": 1620,
+   "epoch": 2.4,
+   "train_loss": 2.9716121161425555,
+   "val_loss": 3.1081501225490196,
+   "val_ppl": 22.379606555566532,
+   "lr": 0.00042066207516277057,
+   "secs": 229.3400046825409
+  },
+  {
+   "step": 1755,
+   "epoch": 2.6,
+   "train_loss": 2.8865481941788285,
+   "val_loss": 3.042920228247549,
+   "val_ppl": 20.966380540906584,
+   "lr": 0.00038971847015952644,
+   "secs": 248.3974254131317
+  },
+  {
+   "step": 1890,
+   "epoch": 2.8,
+   "train_loss": 2.875695839634648,
+   "val_loss": 2.999000995710784,
+   "val_ppl": 20.065481405092466,
+   "lr": 0.0003576860871794041,
+   "secs": 267.46060943603516
+  },
+  {
+   "step": 2025,
+   "epoch": 3.0,
+   "train_loss": 2.816592405460499,
+   "val_loss": 2.953641362208946,
+   "val_ppl": 19.175652247867163,
+   "lr": 0.00032495365502120807,
+   "secs": 286.5527799129486
+  },
+  {
+   "step": 2160,
+   "epoch": 3.2,
+   "train_loss": 2.564085946259675,
+   "val_loss": 2.928976016773897,
+   "val_ppl": 18.708463532179515,
+   "lr": 0.00029191839792650333,
+   "secs": 305.6128399372101
+  },
+  {
+   "step": 2295,
+   "epoch": 3.4,
+   "train_loss": 2.5812710620738843,
+   "val_loss": 2.892729923023897,
+   "val_ppl": 18.042497060148175,
+   "lr": 0.0002589812150671247,
+   "secs": 324.68014454841614
+  },
+  {
+   "step": 2430,
+   "epoch": 3.6,
+   "train_loss": 2.568952374988132,
+   "val_loss": 2.8629876972273283,
+   "val_ppl": 17.51377470358255,
+   "lr": 0.00022654181543558974,
+   "secs": 343.757474899292
+  },
+  {
+   "step": 2565,
+   "epoch": 3.8,
+   "train_loss": 2.54395074667754,
+   "val_loss": 2.829806085324755,
+   "val_ppl": 16.942175169587,
+   "lr": 0.00019499386717892765,
+   "secs": 362.81246519088745
+  },
+  {
+   "step": 2700,
+   "epoch": 4.0,
+   "train_loss": 2.5122765744173967,
+   "val_loss": 2.7936642635569853,
+   "val_ppl": 16.3407871841654,
+   "lr": 0.0001647202202411516,
+   "secs": 381.9493730068207
+  },
+  {
+   "step": 2835,
+   "epoch": 4.2,
+   "train_loss": 2.3451944201080885,
+   "val_loss": 2.790058095894608,
+   "val_ppl": 16.281965689674777,
+   "lr": 0.00013608826028997369,
+   "secs": 401.0097517967224
+  },
+  {
+   "step": 2970,
+   "epoch": 4.4,
+   "train_loss": 2.319630155739961,
+   "val_loss": 2.7754834271599265,
+   "val_ppl": 16.046382377983488,
+   "lr": 0.00010944545031015346,
+   "secs": 420.0392129421234
+  },
+  {
+   "step": 3105,
+   "epoch": 4.6,
+   "train_loss": 2.3385083260359587,
+   "val_loss": 2.7563576516544117,
+   "val_ppl": 15.742399095206338,
+   "lr": 8.511511396845205e-05,
+   "secs": 439.0568685531616
+  },
+  {
+   "step": 3240,
+   "epoch": 4.8,
+   "train_loss": 2.2873461546721283,
+   "val_loss": 2.741790230545343,
+   "val_ppl": 15.514735202246875,
+   "lr": 6.339251192113996e-05,
+   "secs": 458.07205843925476
+  },
+  {
+   "step": 3375,
+   "epoch": 5.0,
+   "train_loss": 2.288435623380873,
+   "val_loss": 2.7299025160845587,
+   "val_ppl": 15.331392382898194,
+   "lr": 4.454125868000661e-05,
+   "secs": 477.1693217754364
+  },
+  {
+   "step": 3510,
+   "epoch": 5.2,
+   "train_loss": 2.1954866541756526,
+   "val_loss": 2.7287911879595588,
+   "val_ppl": 15.314363639361096,
+   "lr": 2.8790123519974072e-05,
+   "secs": 496.1876983642578
+  },
+  {
+   "step": 3645,
+   "epoch": 5.4,
+   "train_loss": 2.210288408067491,
+   "val_loss": 2.723057195925245,
+   "val_ppl": 15.226802477652003,
+   "lr": 1.6330254250881014e-05,
+   "secs": 515.2274353504181
+  },
+  {
+   "step": 3780,
+   "epoch": 5.6,
+   "train_loss": 2.189453544440093,
+   "val_loss": 2.7210599820006127,
+   "val_ppl": 15.196421644326437,
+   "lr": 7.312857544339812e-06,
+   "secs": 534.3043751716614
+  },
+  {
+   "step": 3915,
+   "epoch": 5.8,
+   "train_loss": 2.223091639412774,
+   "val_loss": 2.7198572112438724,
+   "val_ppl": 15.178154820368535,
+   "lr": 1.847363966045512e-06,
+   "secs": 553.3401882648468
+  },
+  {
+   "step": 4050,
+   "epoch": 6.0,
+   "train_loss": 2.1834111761163784,
+   "val_loss": 2.7196574467677697,
+   "val_ppl": 15.175123067051027,
+   "lr": 9.998177752379432e-11,
+   "secs": 572.4015958309174
+  }
+ ],
+ "best_step": 4050,
+ "best_monitor_nll": 2.7196574467677697,
+ "train_secs": 573.2614109516144,
+ "val_ppl": 16.50925856459862,
+ "val_nll": 2.8039213486618872,
+ "n_tokens": 346290,
+ "sampling": [
+  {
+   "temperature": 0.0,
+   "valid": 59.0,
+   "ended": 2.0,
+   "unique_lines": 76.18477938987789,
+   "secs": 31.54456353187561,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op\nimport sqlalchemy as sa\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n\nfrom alembic import op\n",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef _get_config(config):\n    if not _get_config:\n        _get_config(config)\n    else:\n        _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)\n    _get_config(config)",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models import CourseKeyestore\nfrom xmodule.utils.translation import ugettext_lazy as _\nfrom xmodule_utils.translation import ugettext_lazy as _\n\nfrom xmodule_utils.translation import ugettext_lazy as _\n\nfrom xmodule_lazy import ugettext_lazy as _\n\nfrom xmodule_lazy import ugettext_lazy as _\n\nfrom xmodule_lazy import _\n\nfrom xmodule_lazy import _\n\nfrom xmodule_lazy import _\n\nfrom xmodule_lazy import _\n"
+   ]
+  },
+  {
+   "temperature": 0.5,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 45.5,
+   "ended": 7.5,
+   "unique_lines": 85.026381884226,
+   "secs": 31.751495361328125,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op\nimport sqlalchemy as sa\n\nfrom alembic import op\n\n# revision identifiers, used by Alembic.\nrevision = '16320c2c6'\ndown_revision = '166336424c3'\nbranch_labels = None\nbranch_labels = None\n\ndef upgrade():\n    op.drop_table()",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef _load(node):\n    \"\"\"\n    :param node:\n    :type node :type node: str\n    :param node: str\n    :type node: str\n    :type node: str\n    :param node: str\n    :type node :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str\n    :type node: str",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.models import CourseKey\nfrom xmodule.utils.translation import ugettext_lazy as _\n\nfrom xmodule_utils.translation import ugettext_lazy as _\nfrom xmodule_lazy import ugettext_lazy as _\n\nfrom xmodule_utils.utils.translation import ugettext_lazy as _\n\n\nclass CustomUser(BaseUserAddBaseBaseBaseBase):\n    \"\"\"\n    BaseUser for a user.\n\n    \"\"\"\n    A user-class is a user to the user's user.\n\n    def __init__(self, *args, **kwargs):"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 39.0,
+   "ended": 15.0,
+   "unique_lines": 90.12881519291808,
+   "secs": 31.569073915481567,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, op\nfrom alembic import op\nimport sqlalchemy as sa\n\n# Add a migration used by Alembic and op.\nrevision = '25c4c6'\ndown_revision = '1563'\nbranch_labels = '44565518c648b'\nbranch_labels = '86436446f4f67643b5636676779286'\n\n# Dele Alembic\nrevision = '147'",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute():\n\tprint \"usage: \" + _os.path.join(sys.argv[1:])\n\tprint \"usage: %s\" % _os._syscall(sys.argv[1:])\n\tprint \"usage: %s\" % (\"usage: %s\" %(sys.argv[1])\n\ndef __exit__(sys):\n\tsys.exit(1)\n\ndef __exit__(sys):\n\tsys.argv[1] = sys.argv[2]\n\tif sys.argv[2] == \"win\":",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.utils import (\n    CourseKeystore.urlpatterns,\n    CourseKeyboard_id,\n    CourseKey,\n    CourseKeyboard_id,\n    CourseKey,\n    CourseKey,\n    CourseKeyboardKeyboardKeyboardKeyboardKey,\n    CourseKeyboardKeyboardKeyboardKeyboardKeyboardKeyboardKeyboardKeyboard,\n    CourseKeyboardKeyboardKeyboardKeyboardKeyboardKeyboardKeyboardKey,"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 30.0,
+   "ended": 13.5,
+   "unique_lines": 91.34753036452076,
+   "secs": 31.839218378067017,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, op\nfrom alembic import op\nimport sqlalchemy as sa\n\nimport sqlalchemy.get_column_column('admins', sa.Column('id', sa.Integer(), nullable=False),\n    ),\n    sa.Column('id', sa.Integer(), nullable=True),\n    sa.Column('id', sa.Integer(), nullable=True),\n    sa.Column('id', sa.String(Integer(), nullable=True), nullable=True),\n    sa.Column('id', sa.String(Integer(), nullable=False), nullable=False),",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute():\n\tprint \"usage: \" + _os.path.join(sys.argv[1:])\n\tprint \"usage: %s\" % _os._syscall(sys.argv[1:])\n\tprint \"usage: %s\" % (\"usage: %s\" %(sys.argv[1])\n\ndef __exit__(sys):\n\tsys.exit(1)\n\ndef __exit__(sys):\n\tsys.argv[1] = sys.argv[2]\n\tif sys.argv[2] == \"win\":",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.utils import (\n    CourseKeystore.urlpatterns,\n    CourseKeyboard_id_name,\n)\nfrom ymodule_utils.decorator import Configurationutils\nfrom ymodule.exceptions import NoKeyestoreModel\nimport xmodule.exceptions.exceptions\n\nfrom xmodule.exceptions import InvalidKeyError\nfrom xmodule.exceptions import InvalidKeyError, InvalidKeyError, NoKeyError, UncachedError\nfrom xmodule.module.exceptions import InvalidKeyError\nfrom xmodule.django.template import NoKeyError\n\n\ndef is_exists(url):"
+   ]
+  },
+  {
+   "temperature": 1.0,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 22.5,
+   "ended": 22.0,
+   "unique_lines": 92.84906155047247,
+   "secs": 31.864839792251587,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, op\nfrom alembic import op\nimport sqlalchemy.sql\n\nm_sqlalchemy.execute(\"\"\"select Columns\"\"\"(1.1.25, type(3.0.0))\n'''1-table relationship\n\n# revision identifiers, used by Aletab alembic.\nrevision = '8b'\nbranch_depends_table = ['active_revision']\nbranch_table_table = op.Column('project/project_table/v2')\nbranch_table = 'job_table'\n\nfor op in op.drop():",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute():\n\tprint \"usage to install file\"\n\tsys.stderr.exit_info().write(2)\n\tif len(sys.argv) > 2:\n\t\tfp.close()\n\tprint \"usage: %s for %s\" % (sys.argv[1]))\n\n\tfp.close()\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.utils import (\n    CourseKeystore.urlify,\n    CourseKeyboard_id_name,\n)\n\n\ndef create_settings(migrate_engine):\n    \"\"\"\n    Gets all service by models. See the session\n    http://course.scask.org/course_id: http://docs/en/en.cache/en\n    https://api.djangoproject.com/en/api-key-url\n    \"\"\"\n\n    # Make sure we get the database and is to load\n    # for user_key_api_id in"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 0,
+   "top_p": 0.9,
+   "valid": 45.5,
+   "ended": 8.5,
+   "unique_lines": 87.4081293829305,
+   "secs": 32.92188763618469,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op\nimport sqlalchemy as sa\n\nfrom alembic import op\n\n# revision identifiers, used by Alembic.\nrevision = '1e920c2c6'\ndown_revision = '16633642493'\nbranch_labels = None\nbranch_labels = None\n\ndef upgrade():\n    op.drop_table('revision', 'f_f_revision')\n    op.drop_column('revision', 'c_revision')\n    op.drop_column('revision', 'revision')",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef _load(node):\n    \"\"\"\n    :param node :param node :type node: :param node\n    :param node: the node\n    :type node :type node :type node :type node: the node\n    :param node :param node: ``int`` node type node\n    :type node: str\n    :type node :type node: str\n    :type node: the node\n    :type node: int\n    :type node: str\n    :type node_type :type node: int\n    :type node :type node_type node :type nodetype node\n    :type node: int",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models import Model\n\n\nclass ConfigTest(Base):\n    \"\"\"\n    Configuration for the given config.\n    \"\"\"\n    def __init__(self, config):\n        self._config = config\n        self._config = config\n        self._config = config\n        self._config = config\n\n    def get_config(self):\n        self._config = config\n        self._config = config\n\n    def get_config(self):\n        return config\n\n    def get_config(self, config):\n        return config\n\n    def get_config(self, config):\n        return config\n\n    def get_config(self, config):\n        return config\n"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 0,
+   "top_p": 0.95,
+   "valid": 35.0,
+   "ended": 17.0,
+   "unique_lines": 91.100270604774,
+   "secs": 32.830217599868774,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, op\nfrom alembic import op\nimport sqlalchemy as sa\n\nimport sqlalchemy as sa\n\ndef upgrade():\n    op.drop_table('id', sa.Column('id', sa.String(4555))\n\n# revision identifiers, used by Alembic.\nrevision = 'c48b'\nbranch_depends_table = ['active_revision']\nbranch_table_table = op.Column('project_id', sa.Integer(), nullable=True, primary_key=True, nullable=False)",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute():\n\tprint \"usage: \" + _os.path.join(sys.argv[1:])\n\tprint \"usage: perfutils.common.py 2000\"\n\tprint \"usage: 0.0.2 200000\"\n\ndef main():\n\tfor _ in __sys.argv:\n\t\tsys.exit(1)\n\n\tfor _ in sys.argv[1:]):\n\t\tsys.exit(1)\n\n\tfor _, _ in sys.argv[2].strip():",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.utils import (\n    CourseKey, CourseKeyestoreView,\n)\n\n\nclass CourseAdminTests(Base):\n    \"\"\"\n    Test that can be a course based on the user's handle specified\n    \"\"\"\n    # Notifier is available on the course has a course.\n    # Page is already for an course page as the next storage\n    # the course directory, the page.\n    # If the first is in the course.\n    # If a course_id is specified, we can be used, can be specified"
+   ]
+  }
+ ],
+ "secs": 801.6441292762756,
+ "max_mem_gb": 4.464812278747559,
+ "max_reserved_gb": 9.87890625
+}

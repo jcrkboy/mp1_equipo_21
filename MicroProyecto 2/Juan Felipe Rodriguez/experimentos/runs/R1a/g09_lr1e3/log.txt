@@ -1,0 +1,13 @@
+18:30:28 inicio R1a/g09_lr1e3: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.001, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:30:48 step 135/1350 ep 0.20 train 6.5937 val 5.0410 ppl 154.630 19s
+18:31:07 step 270/1350 ep 0.40 train 4.7957 val 4.4222 ppl 83.280 38s
+18:31:26 step 405/1350 ep 0.60 train 4.3212 val 4.0562 ppl 57.757 57s
+18:31:45 step 540/1350 ep 0.80 train 4.0305 val 3.8056 ppl 44.954 76s
+18:32:04 step 675/1350 ep 1.00 train 3.7882 val 3.6241 ppl 37.489 95s
+18:32:23 step 810/1350 ep 1.20 train 3.4953 val 3.5033 ppl 33.224 114s
+18:32:43 step 945/1350 ep 1.40 train 3.3987 val 3.3898 ppl 29.661 134s
+18:33:02 step 1080/1350 ep 1.60 train 3.3079 val 3.3188 ppl 27.628 153s
+18:33:21 step 1215/1350 ep 1.80 train 3.2307 val 3.2852 ppl 26.715 172s
+18:33:40 step 1350/1350 ep 2.00 train 3.1993 val 3.2780 ppl 26.522 191s
+18:33:44 validacion completa: perplejidad 29.235 (nll 3.3754, 346290 tokens)
+18:33:44 fin R1a/g09_lr1e3: 3.3 min, memoria 4.46 GB

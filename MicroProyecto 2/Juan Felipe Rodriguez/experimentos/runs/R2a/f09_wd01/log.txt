@@ -1,0 +1,8 @@
+03:33:13 inicio R2a/f09_wd01: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 0.5, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.1, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True}
+03:34:48 step 68/338 ep 0.10 train 1.7215 val 1.7128 ppl 5.544 94s
+03:36:24 step 136/338 ep 0.20 train 1.6661 val 1.6831 ppl 5.382 190s
+03:38:00 step 204/338 ep 0.30 train 1.6602 val 1.6657 ppl 5.289 286s
+03:39:35 step 272/338 ep 0.40 train 1.6458 val 1.6580 ppl 5.249 381s
+03:41:07 step 338/338 ep 0.50 train 1.6484 val 1.6566 ppl 5.241 473s
+03:41:26 validacion completa: perplejidad 5.283 (nll 1.6646, 346290 tokens)
+03:41:26 fin R2a/f09_wd01: 8.2 min, memoria 5.37 GB

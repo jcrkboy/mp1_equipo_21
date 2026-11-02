@@ -1,0 +1,13 @@
+18:17:26 inicio R1a/g05_profundo: {'kind': 'gpt', 'n_layer': 10, 'n_head': 8, 'n_embd': 256, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:17:46 step 135/1350 ep 0.20 train 7.8995 val 5.9179 ppl 371.634 19s
+18:18:05 step 270/1350 ep 0.40 train 5.5030 val 5.0805 ppl 160.847 39s
+18:18:25 step 405/1350 ep 0.60 train 4.9549 val 4.7078 ppl 110.808 58s
+18:18:44 step 540/1350 ep 0.80 train 4.6602 val 4.4236 ppl 83.393 78s
+18:19:04 step 675/1350 ep 1.00 train 4.3995 val 4.2257 ppl 68.425 97s
+18:19:23 step 810/1350 ep 1.20 train 4.2072 val 4.0974 ppl 60.186 117s
+18:19:43 step 945/1350 ep 1.40 train 4.1078 val 4.0073 ppl 54.997 136s
+18:20:02 step 1080/1350 ep 1.60 train 4.0460 val 3.9552 ppl 52.209 156s
+18:20:22 step 1215/1350 ep 1.80 train 3.9877 val 3.9312 ppl 50.968 175s
+18:20:41 step 1350/1350 ep 2.00 train 3.9617 val 3.9273 ppl 50.768 194s
+18:20:45 validacion completa: perplejidad 54.760 (nll 4.0030, 346290 tokens)
+18:20:46 fin R1a/g05_profundo: 3.3 min, memoria 4.36 GB

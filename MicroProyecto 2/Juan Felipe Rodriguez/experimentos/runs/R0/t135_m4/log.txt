@@ -1,0 +1,3 @@
+18:02:50 inicio R0/t135_m4: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 1.0, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'mode': 'timing', 'updates': 8}
+18:03:00 step 8/8 ep 0.01 train 1.7962 val 2.0156 ppl 7.505 9s
+18:03:00 fin R0/t135_m4: 0.2 min, memoria 2.90 GB

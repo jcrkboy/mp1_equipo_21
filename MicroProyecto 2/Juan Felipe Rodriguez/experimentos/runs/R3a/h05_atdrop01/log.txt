@@ -1,0 +1,8 @@
+17:44:20 inicio R3a/h05_atdrop01: {'kind': 'HuggingFaceTB/SmolLM2-360M', 'epochs': 0.5, 'lr': 0.0001, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'attention_dropout': 0.1}
+17:46:30 step 68/338 ep 0.10 train nan val 1.6289 ppl 5.098 129s
+17:48:38 step 136/338 ep 0.20 train nan val 1.7541 ppl 5.778 256s
+17:50:44 step 204/338 ep 0.30 train nan val 1.7552 ppl 5.784 382s
+17:52:50 step 272/338 ep 0.40 train nan val 1.7552 ppl 5.784 509s
+17:54:53 step 338/338 ep 0.50 train nan val 1.7552 ppl 5.785 631s
+17:55:27 validacion completa: perplejidad nan (nll nan, 346290 tokens)
+17:55:27 fin R3a/h05_atdrop01: 11.1 min, memoria 7.93 GB

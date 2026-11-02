@@ -1,0 +1,115 @@
+{
+ "resultados": {
+  "GPT desde cero": {
+   "ppl": 14.662107425093481,
+   "nll": 2.685266439543991,
+   "ppl_val": 15.155496470909307,
+   "n": 345525,
+   "valida": 50.0,
+   "voraz": 58.5,
+   "errores": [
+    [
+     "'(' was never closed",
+     17
+    ],
+    [
+     "invalid syntax",
+     8
+    ],
+    [
+     "'[' was never closed",
+     7
+    ]
+   ]
+  },
+  "135M pre-entrenado": {
+   "ppl": 6.016429292976598,
+   "nll": 1.7944939426416322,
+   "ppl_val": 5.961507763096509,
+   "n": 345525,
+   "valida": 63.0,
+   "voraz": 70.5,
+   "errores": [
+    [
+     "'(' was never closed",
+     6
+    ],
+    [
+     "unterminated triple-quoted string literal (detected at line 23)",
+     4
+    ],
+    [
+     "Missing parentheses in call to 'print'",
+     4
+    ]
+   ]
+  },
+  "135M con finetuning": {
+   "ppl": 4.676188867195289,
+   "nll": 1.5424834335544642,
+   "ppl_val": 4.763651992254641,
+   "n": 345525,
+   "valida": 62.0,
+   "voraz": 65.0,
+   "errores": [
+    [
+     "'(' was never closed",
+     15
+    ],
+    [
+     "'[' was never closed",
+     8
+    ],
+    [
+     "'{' was never closed",
+     6
+    ]
+   ]
+  },
+  "360M pre-entrenado": {
+   "ppl": 4.601016836437841,
+   "nll": 1.5262773304663193,
+   "ppl_val": 4.579983279503867,
+   "n": 345525,
+   "valida": 60.5,
+   "voraz": 70.5,
+   "errores": [
+    [
+     "'(' was never closed",
+     12
+    ],
+    [
+     "Missing parentheses in call to 'print'",
+     4
+    ],
+    [
+     "expected an indented block after function definition on line 33",
+     3
+    ]
+   ]
+  },
+  "360M con finetuning": {
+   "ppl": 3.854335321212901,
+   "nll": 1.3491985722304374,
+   "ppl_val": 3.9064669015704023,
+   "n": 345525,
+   "valida": 57.49999999999999,
+   "voraz": 62.5,
+   "errores": [
+    [
+     "'(' was never closed",
+     17
+    ],
+    [
+     "'[' was never closed",
+     8
+    ],
+    [
+     "Missing parentheses in call to 'print'",
+     6
+    ]
+   ]
+  }
+ },
+ "referencia": 57.99999999999999
+}

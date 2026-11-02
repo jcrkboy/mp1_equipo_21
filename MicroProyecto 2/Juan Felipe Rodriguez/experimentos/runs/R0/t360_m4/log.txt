@@ -1,0 +1,3 @@
+18:03:30 inicio R0/t360_m4: {'kind': 'HuggingFaceTB/SmolLM2-360M', 'epochs': 1.0, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'mode': 'timing', 'updates': 8}
+18:03:46 step 8/8 ep 0.01 train 1.5317 val 1.7160 ppl 5.562 15s
+18:03:46 fin R0/t360_m4: 0.3 min, memoria 6.96 GB

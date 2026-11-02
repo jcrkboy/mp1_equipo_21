@@ -1,0 +1,30 @@
+04:27:46 inicio R2b/largo_f06_constante: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 2.0, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.0, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': True, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'min_lr_ratio': 1.0, 'patience_evals': 6, 'sampling': True}
+04:29:21 step 68/1350 ep 0.10 train 1.7288 val 1.7079 ppl 5.518 95s
+04:30:56 step 136/1350 ep 0.20 train 1.6748 val 1.6804 ppl 5.368 190s
+04:32:32 step 204/1350 ep 0.30 train 1.6644 val 1.6598 ppl 5.258 286s
+04:34:08 step 272/1350 ep 0.40 train 1.6410 val 1.6454 ppl 5.183 382s
+04:35:43 step 340/1350 ep 0.50 train 1.5800 val 1.6317 ppl 5.113 477s
+04:37:18 step 408/1350 ep 0.60 train 1.5884 val 1.6211 ppl 5.059 572s
+04:38:52 step 476/1350 ep 0.71 train 1.5704 val 1.6123 ppl 5.014 665s
+04:40:26 step 544/1350 ep 0.81 train 1.5779 val 1.6009 ppl 4.958 760s
+04:42:01 step 612/1350 ep 0.91 train 1.6055 val 1.5926 ppl 4.917 855s
+04:43:37 step 680/1350 ep 1.01 train 1.5654 val 1.5864 ppl 4.886 951s
+04:45:15 step 748/1350 ep 1.11 train 1.4625 val 1.5882 ppl 4.895 1048s
+04:46:53 step 816/1350 ep 1.21 train 1.4742 val 1.5807 ppl 4.858 1146s
+04:48:28 step 884/1350 ep 1.31 train 1.4607 val 1.5776 ppl 4.843 1242s
+04:50:04 step 952/1350 ep 1.41 train 1.4351 val 1.5751 ppl 4.831 1338s
+04:51:39 step 1020/1350 ep 1.51 train 1.4671 val 1.5724 ppl 4.818 1432s
+04:53:13 step 1088/1350 ep 1.61 train 1.4846 val 1.5635 ppl 4.776 1527s
+04:54:48 step 1156/1350 ep 1.71 train 1.4439 val 1.5597 ppl 4.757 1621s
+04:56:24 step 1224/1350 ep 1.81 train 1.4529 val 1.5553 ppl 4.736 1718s
+04:58:00 step 1292/1350 ep 1.91 train 1.4382 val 1.5542 ppl 4.732 1814s
+04:59:24 step 1350/1350 ep 2.00 train 1.4764 val 1.5513 ppl 4.717 1898s
+04:59:43 validacion completa: perplejidad 4.824 (nll 1.5737, 346290 tokens)
+05:00:36 muestreo {'temperature': 0.0}: validez 57.5 % | eos 1.5 % | lineas unicas 83.9 %
+05:01:30 muestreo {'temperature': 0.5, 'top_k': 50, 'top_p': 1.0}: validez 55.5 % | eos 7.0 % | lineas unicas 86.9 %
+05:02:25 muestreo {'temperature': 0.7, 'top_k': 50, 'top_p': 1.0}: validez 51.5 % | eos 9.0 % | lineas unicas 89.6 %
+05:03:20 muestreo {'temperature': 0.8, 'top_k': 50, 'top_p': 1.0}: validez 49.0 % | eos 6.0 % | lineas unicas 91.5 %
+05:04:14 muestreo {'temperature': 1.0, 'top_k': 50, 'top_p': 1.0}: validez 51.0 % | eos 10.0 % | lineas unicas 92.6 %
+05:05:09 muestreo {'temperature': 0.7, 'top_k': 0, 'top_p': 0.9}: validez 61.5 % | eos 6.0 % | lineas unicas 88.5 %
+05:06:05 muestreo {'temperature': 0.8, 'top_k': 0, 'top_p': 0.95}: validez 52.5 % | eos 8.5 % | lineas unicas 90.7 %
+05:06:05 fin R2b/largo_f06_constante: 38.3 min, memoria 5.37 GB

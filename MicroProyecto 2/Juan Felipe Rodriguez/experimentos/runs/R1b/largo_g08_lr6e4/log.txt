@@ -1,0 +1,40 @@
+18:57:03 inicio R1b/largo_g08_lr6e4: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 6.0, 'lr': 0.0006, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': True, 'seed': 0, 'eval_batch': 32, 'patience_evals': 8, 'sampling': True}
+18:57:23 step 135/4050 ep 0.20 train 7.6840 val 5.5752 ppl 263.794 19s
+18:57:42 step 270/4050 ep 0.40 train 5.1371 val 4.6719 ppl 106.899 38s
+18:58:01 step 405/4050 ep 0.60 train 4.4791 val 4.2099 ppl 67.347 57s
+18:58:20 step 540/4050 ep 0.80 train 4.1221 val 3.9147 ppl 50.134 76s
+18:58:39 step 675/4050 ep 1.00 train 3.9299 val 3.7070 ppl 40.733 96s
+18:58:59 step 810/4050 ep 1.20 train 3.5970 val 3.5875 ppl 36.145 115s
+18:59:18 step 945/4050 ep 1.40 train 3.5089 val 3.4673 ppl 32.050 134s
+18:59:37 step 1080/4050 ep 1.60 train 3.4401 val 3.3771 ppl 29.285 153s
+18:59:56 step 1215/4050 ep 1.80 train 3.3405 val 3.2780 ppl 26.522 172s
+19:00:15 step 1350/4050 ep 2.00 train 3.2636 val 3.1966 ppl 24.450 191s
+19:00:34 step 1485/4050 ep 2.20 train 3.0061 val 3.1491 ppl 23.315 210s
+19:00:53 step 1620/4050 ep 2.40 train 2.9716 val 3.1082 ppl 22.380 229s
+19:01:12 step 1755/4050 ep 2.60 train 2.8865 val 3.0429 ppl 20.966 248s
+19:01:31 step 1890/4050 ep 2.80 train 2.8757 val 2.9990 ppl 20.065 267s
+19:01:50 step 2025/4050 ep 3.00 train 2.8166 val 2.9536 ppl 19.176 287s
+19:02:09 step 2160/4050 ep 3.20 train 2.5641 val 2.9290 ppl 18.708 306s
+19:02:29 step 2295/4050 ep 3.40 train 2.5813 val 2.8927 ppl 18.042 325s
+19:02:48 step 2430/4050 ep 3.60 train 2.5690 val 2.8630 ppl 17.514 344s
+19:03:07 step 2565/4050 ep 3.80 train 2.5440 val 2.8298 ppl 16.942 363s
+19:03:26 step 2700/4050 ep 4.00 train 2.5123 val 2.7937 ppl 16.341 382s
+19:03:45 step 2835/4050 ep 4.20 train 2.3452 val 2.7901 ppl 16.282 401s
+19:04:04 step 2970/4050 ep 4.40 train 2.3196 val 2.7755 ppl 16.046 420s
+19:04:23 step 3105/4050 ep 4.60 train 2.3385 val 2.7564 ppl 15.742 439s
+19:04:42 step 3240/4050 ep 4.80 train 2.2873 val 2.7418 ppl 15.515 458s
+19:05:01 step 3375/4050 ep 5.00 train 2.2884 val 2.7299 ppl 15.331 477s
+19:05:20 step 3510/4050 ep 5.20 train 2.1955 val 2.7288 ppl 15.314 496s
+19:05:39 step 3645/4050 ep 5.40 train 2.2103 val 2.7231 ppl 15.227 515s
+19:05:58 step 3780/4050 ep 5.60 train 2.1895 val 2.7211 ppl 15.196 534s
+19:06:17 step 3915/4050 ep 5.80 train 2.2231 val 2.7199 ppl 15.178 553s
+19:06:36 step 4050/4050 ep 6.00 train 2.1834 val 2.7197 ppl 15.175 572s
+19:06:40 validacion completa: perplejidad 16.509 (nll 2.8039, 346290 tokens)
+19:07:12 muestreo {'temperature': 0.0}: validez 59.0 % | eos 2.0 % | lineas unicas 76.2 %
+19:07:44 muestreo {'temperature': 0.5, 'top_k': 50, 'top_p': 1.0}: validez 45.5 % | eos 7.5 % | lineas unicas 85.0 %
+19:08:15 muestreo {'temperature': 0.7, 'top_k': 50, 'top_p': 1.0}: validez 39.0 % | eos 15.0 % | lineas unicas 90.1 %
+19:08:47 muestreo {'temperature': 0.8, 'top_k': 50, 'top_p': 1.0}: validez 30.0 % | eos 13.5 % | lineas unicas 91.3 %
+19:09:19 muestreo {'temperature': 1.0, 'top_k': 50, 'top_p': 1.0}: validez 22.5 % | eos 22.0 % | lineas unicas 92.8 %
+19:09:52 muestreo {'temperature': 0.7, 'top_k': 0, 'top_p': 0.9}: validez 45.5 % | eos 8.5 % | lineas unicas 87.4 %
+19:10:25 muestreo {'temperature': 0.8, 'top_k': 0, 'top_p': 0.95}: validez 35.0 % | eos 17.0 % | lineas unicas 91.1 %
+19:10:25 fin R1b/largo_g08_lr6e4: 13.4 min, memoria 4.46 GB

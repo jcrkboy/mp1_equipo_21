@@ -1,0 +1,126 @@
+{
+ "id": "b135",
+ "round": "R0",
+ "cfg": {
+  "kind": "HuggingFaceTB/SmolLM2-135M",
+  "epochs": 1.0,
+  "lr": 5e-05,
+  "micro_batch": 4,
+  "grad_accum": 4,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.1,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "checkpointing": true,
+  "mode": "baseline",
+  "sampling": true
+ },
+ "n_params": 134515008,
+ "val_ppl": 5.961507763096509,
+ "val_nll": 1.7853234294684368,
+ "n_tokens": 346290,
+ "sampling": [
+  {
+   "temperature": 0.0,
+   "valid": 61.5,
+   "ended": 1.5,
+   "unique_lines": 80.10781221060785,
+   "secs": 47.1551034450531,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *\nfrom alembic.core.core import *",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\n_sys.setrecursionlimit(1000000)\n\n_sys.setrecursionlimit(1000000)\n\n_sys.setrecursionlimit(1000000)\n\n_sys.setrecursionlimit(1000000)\n\n_sys.setrecursionlimit(1000000)\n\n_sys.setrecursionlimit(1000000)\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models import Course\nfrom xmodule.modulestore.models import CourseImport\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog\nfrom xmodule.modulestore.models import CourseImportLog"
+   ]
+  },
+  {
+   "temperature": 0.5,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 63.0,
+   "ended": 2.0,
+   "unique_lines": 84.61391646922593,
+   "secs": 45.95797300338745,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, db\nfrom alembic.base import Base\n\nclass NewJob(Base):\n    def __init__(self, *args, **kwds):\n        super(NewJob, self).__init__(*args, **kwds)\n        self.name = 'New Job'\n        self.type = 'job'\n\n    def execute(self, *args, **kwds):\n        print('New Job executed at %s' % self.name)\n        op.execute(self.name, *args, **kwds)\n        return True\n\n    def get_id(self):\n        return self.name\n",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef main():\n    \"\"\"Main function for the program.  Uses the curses wrapper to\n    create a window with a title, and then sets the window's\n    background color.  Then sets the window's title to the current\n    context.  Finally, sets the window's textpad to the given string\n    and sets the textpad's width and height to the given values.  Finally,\n    sets the window's background color to the given color.\n\n    Example usage:\n\n        >>> import curses\n        >>> import os\n        >>> import sys\n        >>> f = open(\"myfile.txt\", \"w\")",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (\n   edu_model,\n    course_model,\n)\n\n_LOGGER = logging.getLogger(__name__)\n\n\nclass CourseImportCommand(BaseCommand):\n    \"\"\"\n    Course import command.\n\n    The command is invoked after the course has been imported.\n    \"\"\"\n\n    help = u'Import course from git and save it to the course folder'\n\n    def handle(self, *args, **options):\n        \"\"\"\n        Handle the command.\n        \"\"\"\n        # Handle the command\n        if options.get('force'):\n            self.force_import()\n        else:\n            self.force_import()\n"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 53.0,
+   "ended": 4.5,
+   "unique_lines": 88.88294510224367,
+   "secs": 45.73542308807373,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, db\nfrom alembic.base import Base\n\n__version__ = '4a571e217ab8'\n\n\nclass TestWebhooks(Base):\n  \"\"\"\n    A test for the webhooks framework.\n\nIt is assumed that the webhooks framework is installed on the local\n    `server` and is connected to a `db` database.\n    \"\"\"\n  def setup(self, server):\n    \"\"\"\n    A setup for a webhooks test.\n\n    The `test_webhooks` module is automatically started in the `server`.\n    \"\"\"",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef main():\n    _sys.exit(0)\n    _sys.exit(1)\n    _sys.exit(2)\n    _sys.exit(3)\n    _sys.exit(4)\n    _sys.exit(5)\n    _sys.exit(6)\n    _sys.exit(7)\n    _sys.exit(8)\n    _sys.exit(9)\n    _sys.exit(10)\n    _sys.exit(11)\n    _sys.exit(12)\n    _sys.exit(13)",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (\n    Courses,\n    CourseImportLog\n)\n\n\n@manage.command()\n@management.option('--module_name', type=str, default='edu', help='Choose a module name')\ndef module_import_command(module_name):\n    \"\"\"\n    Import a course from a module. This command is used to import a course from a module.\n    \"\"\"\n    try:\n        module_name = module_name.lower()\n        if module_name in debug_path:\n            debug_path.remove(module_name)"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 60.0,
+   "ended": 4.5,
+   "unique_lines": 89.56228004599285,
+   "secs": 46.35143256187439,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, sql\nfrom alembic.base import Base\n\n__version__ = '4a571e217ab8'\n\n\nclass TestWebhooks(Base):\n  \"\"\"\n    A test for the webhooks framework.\n\nIt is assumed that the webhooks framework is installed on the local\n    `server` and is connected to a `db` database.\n    The `test-db` database is the one that contains the `data`\n    data structure that represents the database connection information.\n\n    The `test-db` database is also used to test the webhooks",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef do_window_init(win, mode=None):\n    \"\"\"\n    Initialise the window.\n\n    Returns:\n        tkinter.Tk: the window.\n    \"\"\"\n    win = window(win)\n    win.show_all()\n    _sys.exit(0)\n\n\ndef do_window_destroy(win):\n    \"\"\"\n    Destroy the window.\n\n    Returns:\n        tkinter.Tk: the window.\n    \"\"\"\n    win.destroy()\n    _sys.exit(0)\n\n\ndef get_textpad(mode=None, width=None):\n    \"\"\"",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (\n    Courses,\n    CourseImportHandler\n)\n\n\n@manage.singleton()\nclass ImportCourse(ObjectCommand):\n\n    def run(self, *args, **options):\n        \"\"\"\n        Method to import course from one folder to another.\n        :param course_path: folder name\n        :param source_folder: source folder to be imported\n        :return: None\n        \"\"\"\n        context, logger, _ = self.get_command_contexts()\n\n        # Check for source file\n        if not context.file_exists(self.source_folder):\n            raise GitImportError("
+   ]
+  },
+  {
+   "temperature": 1.0,
+   "top_k": 50,
+   "top_p": 1.0,
+   "valid": 49.5,
+   "ended": 4.5,
+   "unique_lines": 92.13659024462376,
+   "secs": 45.72133135795593,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, sql\nfrom alembic_base import Base\n\n__version__ = '4a571e217ab8. '\n__version_no__ ='4a571e217ab8'\n\n# This function will read the update code from the MySQL file and update the\n# table with the new data.\ndef update_update(*, *args, **kwargs) -> Base:\n    update_table = op(\n        'db',\n        args,\n        keyword_args,",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef do_window_function(func, mode=0):\n    \"\"\"\n    The do_window_funct function is used to do the window function.  This\n    function's main purpose is to run the default window function.\n\n    :attr _sys.mainpath: path to home directory for Python\n\n    :attr _sys.systempath: path to system path\n    \"\"\"\n    if os.path.exists(_sys.mainpath):                   # don't run if no system path\n        os.system(_sys._app.exe()); # return\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (edu_model, Course)\n\nURL_TO_IMPORT_COMMAND = 'https://www.edu_gutenberg_admin.com'\nURL_TO_CHILD_COMMAND = '/import'\nBASEURL = 'http://localhost:8080'\n\n@Management.cache\n@Management.ignore_warnings\ndef export_to_grade(dir, username, project):"
+   ]
+  },
+  {
+   "temperature": 0.7,
+   "top_k": 0,
+   "top_p": 0.9,
+   "valid": 59.5,
+   "ended": 3.0,
+   "unique_lines": 86.30347539002793,
+   "secs": 47.55602240562439,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, factory\nfrom alembic.base import Base\n\nfrom alembic.sql import SQL\nfrom alembic.util import db_owner, db_owner_key\n\nclass Upgrade(Base):\n    \"\"\"Upgrade a column in a table.\n\n    Args:\n        column (str): The column name to upgrade.\n        up_sql (string): The SQL statement to execute to upgrade the column.\n        down_sql (string): The SQL statement to execute to delete the column.\n\n    \"\"\"\n    def __init__(self, column, up_sql, down_sql):",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef main():\n    _sys.exit(0)\n    _sys.exit(1)\n    _sys.exit(2)\n    _sys.exit(3)\n    _sys.exit(4)\n    _sys.exit(5)\n    _sys.exit(6)\n    _sys.exit(7)\n    _sys.exit(8)\n    _sys.exit(9)\n    _sys.exit(10)\n    _sys.exit(11)\n    _sys.exit(12)\n    _sys.exit(13)",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (\n    Courses,\n    CourseImportLog\n)\n\n\n@management.command()\n@management.option('--module_name', type=str, default='edu', help='Choose a module name')\ndef module_import_command(module_name):\n    \"\"\"\n    Import a course from a module.\n    \"\"\"\n    try:\n        module_name = module_name.strip().lower()\n    except ValueError:\n        module_name = 'edu'\n    import_dir = 'edu'\n    if module_name == 'edu':\n        import_dir = 'edu_edu'"
+   ]
+  },
+  {
+   "temperature": 0.8,
+   "top_k": 0,
+   "top_p": 0.95,
+   "valid": 58.5,
+   "ended": 4.0,
+   "unique_lines": 88.86328940149744,
+   "secs": 46.82499861717224,
+   "samples": [
+    "\"\"\"Add webhooks table\n\nRevision ID: 4a571e217ab8\nRevises: 3a98a6674cb2\nCreate Date: 2015-08-17 16:52:28.279419\n\n\"\"\"\n\n# revision identifiers, used by Alembic.\nrevision = '4a571e217ab8'\ndown_revision = '3a98a6674cb2'\n\nfrom alembic import op, factory\nfrom alembic.base import Base\n\n__version__ = '4a571e217ab8'\n\n\nclass Aggregator(Base):\n\n    \"\"\"\n    Aggregator class for calculating the histogram of a set of data.\n    \"\"\"\n\n    def __init__(self, __dict, output_dir, measure=None,\n                 aggregation_type=None,\n                 aggregated_counts=None,\n                 single_aggregation_counts=None,\n                 multiple_aggregation_counts=None,\n                 keep_total=False,\n                 histogram_size=None,",
+    "\"\"\"curses\n\nThe main package for curses support for Python.  Normally used by importing\nthe package, and perhaps a particular module inside it.\n\n   import curses\n   from curses import textpad\n   curses.initwin()\n   ...\n\n\"\"\"\n\n__revision__ = \"$Id: __init__.py 61064 2008-02-25 16:29:58Z andrew.kuchling $\"\n\nfrom _curses import *\nfrom curses.wrapper import wrapper\nimport os as _os\nimport sys as _sys\n\ndef execute_proc(proc, *args):\n\tfor arg in args:\n\t\t_sys.stdin.write(str(arg))\n\treturn \"done\"\n\ndef write_to_file(filename):\n\twith open(filename) as fp:\n\t\tfor i in fp:\n\t\t\tfp.write(i.strip())\n\treturn \"done\"\n\ndef cw_print(text, *args):\n\tf = cw.print_fw(text, *args)\n\treturn f\n",
+    "\"\"\"\nScript for importing courseware from git/xml into a mongo modulestore\n\"\"\"\n\nimport os\nimport re\nimport StringIO\nimport subprocess\nimport logging\n\nfrom django.core import management\nfrom django.core.management.base import BaseCommand, CommandError\nfrom django.utils.translation import ugettext as _\n\nimport dashboard.git_import\nfrom dashboard.git_import import GitImportError\nfrom dashboard.models import CourseImportLog\nfrom xmodule.modulestore.django import modulestore\nfrom xmodule.modulestore.models.edu import (\n    Courses,\n    CourseImportHandler\n)\n\n\n@manage.singleton()\nclass ImportCourse(Command):\n"
+   ]
+  }
+ ],
+ "secs": 350.4554626941681,
+ "max_mem_gb": 4.2558698654174805,
+ "max_reserved_gb": 7.123046875
+}

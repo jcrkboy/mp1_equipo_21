@@ -1,0 +1,13 @@
+18:33:44 inicio R1a/g10_sinusoidal: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'sin', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:34:04 step 135/1350 ep 0.20 train 7.9981 val 6.8988 ppl 991.040 19s
+18:34:23 step 270/1350 ep 0.40 train 6.8913 val 6.8829 ppl 975.415 38s
+18:34:42 step 405/1350 ep 0.60 train 6.8749 val 6.8679 ppl 960.937 57s
+18:35:01 step 540/1350 ep 0.80 train 6.8668 val 6.8581 ppl 951.588 76s
+18:35:20 step 675/1350 ep 1.00 train 6.8203 val 6.7156 ppl 825.154 95s
+18:35:39 step 810/1350 ep 1.20 train 6.6906 val 6.5288 ppl 684.592 114s
+18:35:58 step 945/1350 ep 1.40 train 6.5090 val 6.3670 ppl 582.320 133s
+18:36:17 step 1080/1350 ep 1.60 train 6.3829 val 6.2921 ppl 540.277 152s
+18:36:36 step 1215/1350 ep 1.80 train 6.3008 val 6.2391 ppl 512.391 171s
+18:36:55 step 1350/1350 ep 2.00 train 6.2711 val 6.2329 ppl 509.220 190s
+18:36:59 validacion completa: perplejidad 518.421 (nll 6.2508, 346290 tokens)
+18:36:59 fin R1a/g10_sinusoidal: 3.3 min, memoria 4.46 GB

@@ -1,0 +1,13 @@
+18:40:26 inicio R1a/g12_wd01: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.1, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:40:46 step 135/1350 ep 0.20 train 7.3740 val 5.4638 ppl 235.987 19s
+18:41:05 step 270/1350 ep 0.40 train 5.1517 val 4.7826 ppl 119.418 38s
+18:41:24 step 405/1350 ep 0.60 train 4.6753 val 4.3915 ppl 80.765 57s
+18:41:44 step 540/1350 ep 0.80 train 4.3705 val 4.1299 ppl 62.171 77s
+18:42:03 step 675/1350 ep 1.00 train 4.1271 val 3.9519 ppl 52.033 96s
+18:42:22 step 810/1350 ep 1.20 train 3.9236 val 3.8346 ppl 46.275 115s
+18:42:41 step 945/1350 ep 1.40 train 3.8349 val 3.7459 ppl 42.346 134s
+18:43:00 step 1080/1350 ep 1.60 train 3.7707 val 3.6944 ppl 40.221 153s
+18:43:19 step 1215/1350 ep 1.80 train 3.7087 val 3.6713 ppl 39.304 172s
+18:43:38 step 1350/1350 ep 2.00 train 3.6850 val 3.6659 ppl 39.091 192s
+18:43:43 validacion completa: perplejidad 42.717 (nll 3.7546, 346290 tokens)
+18:43:43 fin R1a/g12_wd01: 3.3 min, memoria 4.46 GB

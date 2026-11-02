@@ -1,0 +1,8 @@
+17:32:57 inicio R3a/h04_lr2e4: {'kind': 'HuggingFaceTB/SmolLM2-360M', 'epochs': 0.5, 'lr': 0.0002, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True}
+17:35:07 step 68/338 ep 0.10 train 1.4937 val 1.4980 ppl 4.473 129s
+17:37:17 step 136/338 ep 0.20 train 1.4496 val 1.4592 ppl 4.303 259s
+17:39:28 step 204/338 ep 0.30 train 1.4283 val 1.4260 ppl 4.162 390s
+17:41:39 step 272/338 ep 0.40 train 1.3979 val 1.4051 ppl 4.076 520s
+17:43:45 step 338/338 ep 0.50 train 1.3907 val 1.4002 ppl 4.056 646s
+17:44:19 validacion completa: perplejidad 4.146 (nll 1.4222, 346290 tokens)
+17:44:20 fin R3a/h04_lr2e4: 11.4 min, memoria 7.94 GB

@@ -1,0 +1,13 @@
+18:20:46 inicio R1a/g06_drop02: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.2, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:21:06 step 135/1350 ep 0.20 train 7.4507 val 5.5613 ppl 260.150 19s
+18:21:25 step 270/1350 ep 0.40 train 5.2519 val 4.8538 ppl 128.224 38s
+18:21:44 step 405/1350 ep 0.60 train 4.7768 val 4.4844 ppl 88.622 57s
+18:22:03 step 540/1350 ep 0.80 train 4.4913 val 4.2219 ppl 68.164 77s
+18:22:22 step 675/1350 ep 1.00 train 4.2514 val 4.0386 ppl 56.744 96s
+18:22:41 step 810/1350 ep 1.20 train 4.0570 val 3.9229 ppl 50.544 115s
+18:23:01 step 945/1350 ep 1.40 train 3.9687 val 3.8389 ppl 46.475 134s
+18:23:20 step 1080/1350 ep 1.60 train 3.9066 val 3.7880 ppl 44.169 153s
+18:23:39 step 1215/1350 ep 1.80 train 3.8480 val 3.7657 ppl 43.193 172s
+18:23:58 step 1350/1350 ep 2.00 train 3.8249 val 3.7611 ppl 42.997 191s
+18:24:02 validacion completa: perplejidad 46.855 (nll 3.8471, 346290 tokens)
+18:24:02 fin R1a/g06_drop02: 3.3 min, memoria 4.46 GB

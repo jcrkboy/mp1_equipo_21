@@ -1,0 +1,27 @@
+{
+ "id": "t135_m4",
+ "round": "R0",
+ "cfg": {
+  "kind": "HuggingFaceTB/SmolLM2-135M",
+  "epochs": 1.0,
+  "lr": 5e-05,
+  "micro_batch": 4,
+  "grad_accum": 4,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.1,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "checkpointing": true,
+  "mode": "timing",
+  "updates": 8
+ },
+ "n_params": 134515008,
+ "secs_per_block": 0.07139406353235245,
+ "min_per_epoch": 12.856880941117803,
+ "secs": 9.986137390136719,
+ "max_mem_gb": 2.9013171195983887,
+ "max_reserved_gb": 3.501953125
+}

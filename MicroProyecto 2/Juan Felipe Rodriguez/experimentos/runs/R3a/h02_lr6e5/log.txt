@@ -1,0 +1,8 @@
+17:10:10 inicio R3a/h02_lr6e5: {'kind': 'HuggingFaceTB/SmolLM2-360M', 'epochs': 0.5, 'lr': 6e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True}
+17:12:21 step 68/338 ep 0.10 train 1.4632 val 1.4569 ppl 4.293 129s
+17:14:32 step 136/338 ep 0.20 train 1.4154 val 1.4317 ppl 4.186 259s
+17:16:42 step 204/338 ep 0.30 train 1.4133 val 1.4169 ppl 4.124 390s
+17:18:53 step 272/338 ep 0.40 train 1.3997 val 1.4093 ppl 4.093 520s
+17:20:59 step 338/338 ep 0.50 train 1.4028 val 1.4077 ppl 4.086 647s
+17:21:34 validacion completa: perplejidad 4.148 (nll 1.4226, 346290 tokens)
+17:21:34 fin R3a/h02_lr6e5: 11.4 min, memoria 7.94 GB

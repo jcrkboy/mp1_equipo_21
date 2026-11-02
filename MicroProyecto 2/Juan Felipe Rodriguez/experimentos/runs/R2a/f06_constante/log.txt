@@ -1,0 +1,8 @@
+03:08:17 inicio R2a/f06_constante: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 0.5, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.0, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'min_lr_ratio': 1.0}
+03:09:53 step 68/338 ep 0.10 train 1.7173 val 1.7093 ppl 5.525 95s
+03:11:29 step 136/338 ep 0.20 train 1.6630 val 1.6794 ppl 5.362 192s
+03:13:06 step 204/338 ep 0.30 train 1.6567 val 1.6598 ppl 5.258 288s
+03:14:41 step 272/338 ep 0.40 train 1.6380 val 1.6452 ppl 5.182 384s
+03:16:14 step 338/338 ep 0.50 train 1.6302 val 1.6330 ppl 5.119 476s
+03:16:32 validacion completa: perplejidad 5.178 (nll 1.6443, 346290 tokens)
+03:16:32 fin R2a/f06_constante: 8.3 min, memoria 5.37 GB

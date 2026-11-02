@@ -1,0 +1,13 @@
+17:55:28 inicio R1c/g13_sin_escala: {'kind': 'gpt', 'n_layer': 6, 'n_head': 8, 'n_embd': 384, 'dropout': 0.1, 'tie': True, 'pos': 'sin', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'pos_scale': 0.028}
+17:55:46 step 135/1350 ep 0.20 train 7.3876 val 5.4408 ppl 230.633 18s
+17:56:04 step 270/1350 ep 0.40 train 5.0807 val 4.6518 ppl 104.768 36s
+17:56:23 step 405/1350 ep 0.60 train 4.5521 val 4.2611 ppl 70.887 54s
+17:56:41 step 540/1350 ep 0.80 train 4.2728 val 4.0311 ppl 56.322 73s
+17:56:59 step 675/1350 ep 1.00 train 4.0560 val 3.8719 ppl 48.032 91s
+17:57:17 step 810/1350 ep 1.20 train 3.8683 val 3.7722 ppl 43.477 109s
+17:57:35 step 945/1350 ep 1.40 train 3.7868 val 3.6907 ppl 40.073 127s
+17:57:54 step 1080/1350 ep 1.60 train 3.7278 val 3.6448 ppl 38.274 145s
+17:58:12 step 1215/1350 ep 1.80 train 3.6705 val 3.6203 ppl 37.349 164s
+17:58:30 step 1350/1350 ep 2.00 train 3.6447 val 3.6163 ppl 37.199 182s
+17:58:34 validacion completa: perplejidad 40.840 (nll 3.7097, 346290 tokens)
+17:58:34 fin R1c/g13_sin_escala: 3.1 min, memoria 4.46 GB

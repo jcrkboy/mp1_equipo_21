@@ -1,0 +1,10 @@
+17:49:38 inicio R0/b135: {'kind': 'HuggingFaceTB/SmolLM2-135M', 'epochs': 1.0, 'lr': 5e-05, 'micro_batch': 4, 'grad_accum': 4, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.1, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32, 'checkpointing': True, 'mode': 'baseline', 'sampling': True}
+17:50:04 validacion completa: perplejidad 5.962 (nll 1.7853, 346290 tokens)
+17:50:51 muestreo {'temperature': 0.0}: validez 61.5 % | eos 1.5 % | lineas unicas 80.1 %
+17:51:37 muestreo {'temperature': 0.5, 'top_k': 50, 'top_p': 1.0}: validez 63.0 % | eos 2.0 % | lineas unicas 84.6 %
+17:52:22 muestreo {'temperature': 0.7, 'top_k': 50, 'top_p': 1.0}: validez 53.0 % | eos 4.5 % | lineas unicas 88.9 %
+17:53:09 muestreo {'temperature': 0.8, 'top_k': 50, 'top_p': 1.0}: validez 60.0 % | eos 4.5 % | lineas unicas 89.6 %
+17:53:54 muestreo {'temperature': 1.0, 'top_k': 50, 'top_p': 1.0}: validez 49.5 % | eos 4.5 % | lineas unicas 92.1 %
+17:54:42 muestreo {'temperature': 0.7, 'top_k': 0, 'top_p': 0.9}: validez 59.5 % | eos 3.0 % | lineas unicas 86.3 %
+17:55:29 muestreo {'temperature': 0.8, 'top_k': 0, 'top_p': 0.95}: validez 58.5 % | eos 4.0 % | lineas unicas 88.9 %
+17:55:29 fin R0/b135: 5.8 min, memoria 4.26 GB

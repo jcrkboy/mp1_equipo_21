@@ -1,0 +1,13 @@
+18:07:10 inicio R1a/g02_chico: {'kind': 'gpt', 'n_layer': 4, 'n_head': 8, 'n_embd': 256, 'dropout': 0.1, 'tie': True, 'pos': 'learned', 'epochs': 2.0, 'lr': 0.0003, 'micro_batch': 16, 'grad_accum': 1, 'weight_decay': 0.01, 'warmup_frac': 0.05, 'eval_frac': 0.2, 'clip': 1.0, 'resegment': False, 'seed': 0, 'eval_batch': 32}
+18:07:24 step 135/1350 ep 0.20 train 7.9527 val 5.9503 ppl 383.880 14s
+18:07:38 step 270/1350 ep 0.40 train 5.5187 val 5.0750 ppl 159.965 28s
+18:07:52 step 405/1350 ep 0.60 train 4.9518 val 4.6882 ppl 108.656 41s
+18:08:05 step 540/1350 ep 0.80 train 4.6641 val 4.4263 ppl 83.621 55s
+18:08:19 step 675/1350 ep 1.00 train 4.4317 val 4.2569 ppl 70.591 69s
+18:08:33 step 810/1350 ep 1.20 train 4.2570 val 4.1446 ppl 63.089 83s
+18:08:47 step 945/1350 ep 1.40 train 4.1735 val 4.0648 ppl 58.252 97s
+18:09:01 step 1080/1350 ep 1.60 train 4.1224 val 4.0207 ppl 55.740 111s
+18:09:15 step 1215/1350 ep 1.80 train 4.0709 val 4.0022 ppl 54.719 125s
+18:09:29 step 1350/1350 ep 2.00 train 4.0479 val 3.9985 ppl 54.518 138s
+18:09:32 validacion completa: perplejidad 58.990 (nll 4.0774, 346290 tokens)
+18:09:32 fin R1a/g02_chico: 2.4 min, memoria 4.31 GB

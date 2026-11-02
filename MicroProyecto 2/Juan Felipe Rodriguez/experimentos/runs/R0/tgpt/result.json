@@ -1,0 +1,32 @@
+{
+ "id": "tgpt",
+ "round": "R0",
+ "cfg": {
+  "kind": "gpt",
+  "n_layer": 6,
+  "n_head": 8,
+  "n_embd": 384,
+  "dropout": 0.1,
+  "tie": true,
+  "pos": "learned",
+  "epochs": 2.0,
+  "lr": 0.0003,
+  "micro_batch": 16,
+  "grad_accum": 1,
+  "weight_decay": 0.01,
+  "warmup_frac": 0.05,
+  "eval_frac": 0.2,
+  "clip": 1.0,
+  "resegment": false,
+  "seed": 0,
+  "eval_batch": 32,
+  "mode": "timing",
+  "updates": 40
+ },
+ "n_params": 29611008,
+ "secs_per_block": 0.008325093984603881,
+ "min_per_epoch": 1.499210675060749,
+ "secs": 6.36633825302124,
+ "max_mem_gb": 3.713745594024658,
+ "max_reserved_gb": 4.646484375
+}
