@@ -19,3 +19,15 @@ MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/model.safetensors
 MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/tokenizer.json
 MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/tokenizer_config.json
 MicroProyecto 2/Juan Valera/datos/corpus_codeparrot.json
+
+# Microproyecto 3: adaptadores LoRA, resultados de evaluación y zips (se entregan por Drive)
+Microproyecto 3/**/checkpoints/
+Microproyecto 3/**/resultados/
+Microproyecto 3/**/prueba/
+Microproyecto 3/**/*.zip
+Microproyecto 3/Juan Valera/Entrega microproyecto 3 _ Coursera.pdf
+Microproyecto 3/Juan Valera/Lectura con el enunciado del tercer microproyecto _ Coursera.pdf
+Microproyecto 3/Juan Valera/Lectura_instrucciones_micro_proyecto_3_codigo.pdf
+Microproyecto 3/Juan Valera/MAIA_MAPLN_2026_15_Microproyecto_3_ANEXO.pdf
+Microproyecto 3/Juan Valera/MAIA_MAPLN_Microproyecto_3.ipynb
+Microproyecto 3/Juan Valera/tutorial_GPT_avanzado.ipynb
