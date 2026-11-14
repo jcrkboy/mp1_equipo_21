@@ -1,8 +1,11 @@
 """
-Pipeline ejecutor robusto para MAPLN Microproyecto 3 - Dayana Vega
-Ejecuta la evaluacion zero-shot y finetuning LoRA de Qwen2.5-1.5B y SmolLM2-1.7B,
-calcula pass@1 sobre los 500 problemas de test con generacion por lotes,
-guarda los checkpoints y actualiza el Jupyter Notebook PlnMicroproyecto03.ipynb.
+Pipeline optimizado de alto desempeno para MAPLN Microproyecto 3 - Dayana Vega
+Mejoras clave implementadas:
+1. Prompt enriquecido con test_list[0] para condicionar la firma y nombre exacto de la funcion.
+2. Adaptador LoRA en todas las capas lineales (atencion + MLP: q, k, v, o, gate, up, down).
+3. Rango aumentado a r=32, lora_alpha=64 para maxima capacidad representacional.
+4. Entrenamiento a 5 epocas con optimizador AdamW y enmascaramiento estricto de prompt (-100).
+5. Evaluacion pass@1 por lotes con proteccion de ejecucion en namespace aislado.
 """
 
 import os
@@ -18,14 +21,19 @@ from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig, get_peft_model, PeftModel
 from datasets import load_dataset
 
-def format_prompt(instruction: str) -> str:
-    return f"# Python Problem: {instruction.strip()}\n# Solution:\n"
+def format_prompt(instruction: str, example_test: str = "") -> str:
+    """Prompt enriquecido con el caso de prueba guía para guiar la firma de la función."""
+    inst = instruction.strip()
+    if example_test:
+        return f"# Task: {inst}\n# Example test: {example_test.strip()}\n# Solution in Python:\n"
+    return f"# Task: {inst}\n# Solution in Python:\n"
 
 class MBPPFinetuningDataset(Dataset):
     def __init__(self, data_split, tokenizer, max_length: int = 512):
         self.examples = []
         for item in data_split:
-            prompt = format_prompt(item["text"])
+            first_test = item["test_list"][0] if item.get("test_list") else ""
+            prompt = format_prompt(item["text"], first_test)
             code = item["code"].strip() + tokenizer.eos_token
             
             prompt_ids = tokenizer.encode(prompt, add_special_tokens=False)
@@ -99,7 +107,6 @@ def passes_tests(generated_code: str, test_list: List[str], setup_code: str = ""
     elif "```" in code_cleaned:
         code_cleaned = code_cleaned.split("```")[1].split("```")[0]
         
-    # Namespace aislado con proteccion contra llamadas interactivas a input()
     env = {
         "input": lambda *args: "",
         "print": lambda *args, **kwargs: None
@@ -113,7 +120,7 @@ def passes_tests(generated_code: str, test_list: List[str], setup_code: str = ""
         return False
 
 def evaluate_pass_at_1(model, tokenizer, test_data, batch_size: int = 16) -> Dict[str, Any]:
-    prompts = [format_prompt(item["text"]) for item in test_data]
+    prompts = [format_prompt(item["text"], item["test_list"][0] if item.get("test_list") else "") for item in test_data]
     t0 = time.time()
     solutions = generate_batched(model, tokenizer, prompts, batch_size=batch_size)
     eval_time = time.time() - t0
@@ -130,18 +137,21 @@ def evaluate_pass_at_1(model, tokenizer, test_data, batch_size: int = 16) -> Dic
     print(f"  -> pass@1: {score:.2f}% ({correct}/{len(test_data)}) evaluado en {eval_time:.1f} s")
     return {"pass@1": score, "correct": correct, "total": len(test_data), "details": results, "time": eval_time}
 
-def train_lora_model(model_name: str, tokenizer, train_raw, val_raw, output_dir: str, epochs: int = 3, lr: float = 2e-4, batch_size: int = 4, grad_accum_steps: int = 4):
-    print(f"\n[Finetuning LoRA] Modelo: {model_name}")
+def train_lora_model(model_name: str, tokenizer, train_raw, val_raw, output_dir: str, epochs: int = 5, lr: float = 2e-4, batch_size: int = 4, grad_accum_steps: int = 4):
+    print(f"\n[Finetuning LoRA Optimizado] Modelo: {model_name}")
     dtype = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float16
-    base_model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=dtype, device_map="auto")
+    base_model = AutoModelForCausalLM.from_pretrained(model_name, dtype=dtype, device_map="auto")
     
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
         
+    # Ajuste fino completo en todas las proyecciones lineales (atencion + feedforward)
+    target_modules = ["q_proj", "k_proj", "v_proj", "o_proj", "gate_proj", "up_proj", "down_proj"]
+    
     lora_config = LoraConfig(
-        r=16,
-        lora_alpha=16,
-        target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+        r=32,
+        lora_alpha=64,
+        target_modules=target_modules,
         lora_dropout=0.05,
         bias="none",
         task_type="CAUSAL_LM"
@@ -211,7 +221,7 @@ def train_lora_model(model_name: str, tokenizer, train_raw, val_raw, output_dir:
 
 def main():
     print("=" * 70)
-    print("MAPLN MICROPROYECTO 3: EJECUCION COMPLETA Y EVALUACION PASS@1")
+    print("MAPLN MICROPROYECTO 3: PIPELINE MEJORADO EXPONENCIAL")
     print("=" * 70)
     
     SEED = 42
@@ -224,7 +234,6 @@ def main():
     dtype = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.is_bf16_supported() else torch.float16
     print(f"Dispositivo: {device} | Tipo de datos: {dtype}")
     
-    # 1. Cargar MBPP
     print("\n[1] Cargando dataset MBPP...")
     mbpp = load_dataset("google-research-datasets/mbpp", "full")
     train_raw = mbpp["train"]
@@ -235,48 +244,48 @@ def main():
     ckpt_dir = r"c:\Repo\mp1_equipo_21\Microproyecto03\checkpoints"
     os.makedirs(ckpt_dir, exist_ok=True)
     
-    # 2. Evaluacion 1: Qwen2.5-1.5B Zero-Shot
+    # 2. Qwen2.5-1.5B Zero-Shot con Prompt enriquecido
     print("\n[2] Evaluando Qwen2.5-1.5B Zero-Shot en Test (500 problemas)...")
     qwen_name = "Qwen/Qwen2.5-1.5B"
     tok_qwen = AutoTokenizer.from_pretrained(qwen_name)
-    model_qwen = AutoModelForCausalLM.from_pretrained(qwen_name, torch_dtype=dtype, device_map="auto")
+    model_qwen = AutoModelForCausalLM.from_pretrained(qwen_name, dtype=dtype, device_map="auto")
     res_qwen_zero = evaluate_pass_at_1(model_qwen, tok_qwen, test_raw, batch_size=16)
     del model_qwen
     torch.cuda.empty_cache()
     gc.collect()
     
-    # 3. Finetuning LoRA: Qwen2.5-1.5B
-    print("\n[3] Entrenando adaptador LoRA para Qwen2.5-1.5B...")
+    # 3. Finetuning LoRA: Qwen2.5-1.5B (r=32, todas las capas lineales, 5 epocas)
+    print("\n[3] Entrenando adaptador LoRA de alta capacidad para Qwen2.5-1.5B...")
     qwen_lora_dir = os.path.join(ckpt_dir, "qwen_lora_adapter")
-    hist_qwen = train_lora_model(qwen_name, tok_qwen, train_raw, val_raw, qwen_lora_dir, epochs=3, lr=2e-4)
+    hist_qwen = train_lora_model(qwen_name, tok_qwen, train_raw, val_raw, qwen_lora_dir, epochs=5, lr=2e-4)
     
-    # 4. Evaluacion 2: Qwen2.5-1.5B + LoRA
+    # 4. Evaluacion Qwen2.5-1.5B + LoRA
     print("\n[4] Evaluando Qwen2.5-1.5B + LoRA en Test (500 problemas)...")
-    base_qwen = AutoModelForCausalLM.from_pretrained(qwen_name, torch_dtype=dtype, device_map="auto")
+    base_qwen = AutoModelForCausalLM.from_pretrained(qwen_name, dtype=dtype, device_map="auto")
     model_qwen_lora = PeftModel.from_pretrained(base_qwen, qwen_lora_dir)
     res_qwen_lora = evaluate_pass_at_1(model_qwen_lora, tok_qwen, test_raw, batch_size=16)
     del model_qwen_lora, base_qwen
     torch.cuda.empty_cache()
     gc.collect()
     
-    # 5. Evaluacion 3: SmolLM2-1.7B Zero-Shot
+    # 5. SmolLM2-1.7B Zero-Shot
     print("\n[5] Evaluando SmolLM2-1.7B Zero-Shot en Test (500 problemas)...")
     smol_name = "HuggingFaceTB/SmolLM2-1.7B"
     tok_smol = AutoTokenizer.from_pretrained(smol_name)
-    model_smol = AutoModelForCausalLM.from_pretrained(smol_name, torch_dtype=dtype, device_map="auto")
+    model_smol = AutoModelForCausalLM.from_pretrained(smol_name, dtype=dtype, device_map="auto")
     res_smol_zero = evaluate_pass_at_1(model_smol, tok_smol, test_raw, batch_size=16)
     del model_smol
     torch.cuda.empty_cache()
     gc.collect()
     
-    # 6. Finetuning LoRA: SmolLM2-1.7B
-    print("\n[6] Entrenando adaptador LoRA para SmolLM2-1.7B...")
+    # 6. Finetuning LoRA: SmolLM2-1.7B (r=32, todas las capas lineales, 5 epocas)
+    print("\n[6] Entrenando adaptador LoRA de alta capacidad para SmolLM2-1.7B...")
     smol_lora_dir = os.path.join(ckpt_dir, "smollm2_lora_adapter")
-    hist_smol = train_lora_model(smol_name, tok_smol, train_raw, val_raw, smol_lora_dir, epochs=3, lr=2e-4)
+    hist_smol = train_lora_model(smol_name, tok_smol, train_raw, val_raw, smol_lora_dir, epochs=5, lr=2e-4)
     
-    # 7. Evaluacion 4: SmolLM2-1.7B + LoRA
+    # 7. Evaluacion SmolLM2-1.7B + LoRA
     print("\n[7] Evaluando SmolLM2-1.7B + LoRA en Test (500 problemas)...")
-    base_smol = AutoModelForCausalLM.from_pretrained(smol_name, torch_dtype=dtype, device_map="auto")
+    base_smol = AutoModelForCausalLM.from_pretrained(smol_name, dtype=dtype, device_map="auto")
     model_smol_lora = PeftModel.from_pretrained(base_smol, smol_lora_dir)
     res_smol_lora = evaluate_pass_at_1(model_smol_lora, tok_smol, test_raw, batch_size=16)
     del model_smol_lora, base_smol
@@ -285,7 +294,7 @@ def main():
     
     # 8. Consolidacion de resultados
     print("\n" + "=" * 70)
-    print("RESUMEN FINAL DE EVALUACION: pass@1 EN MBPP TEST (500 PROBLEMAS)")
+    print("RESUMEN GENERAL OPTIMIZADO: pass@1 EN MBPP TEST (500 PROBLEMAS)")
     print("=" * 70)
     summary = [
         {"Configuracion": "1. Qwen2.5-1.5B (Zero-Shot)", "pass@1 (%)": round(res_qwen_zero["pass@1"], 2), "Correctos": res_qwen_zero["correct"], "Total": 500},
