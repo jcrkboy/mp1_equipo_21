@@ -19,3 +19,18 @@ MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/model.safetensors
 MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/tokenizer.json
 MicroProyecto 2/Juan Valera/checkpoints/smollm2_360m_ft/tokenizer_config.json
 MicroProyecto 2/Juan Valera/datos/corpus_codeparrot.json
+
+# Checkpoints y archivos pesados
+**/checkpoints/
+**/*.pt
+**/*.bin
+**/*.safetensors
+**/*.onnx
+**/corpus_8000.json
+**/training_results.json
+**/experiment_results.json
+
+# Entornos y cache
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
