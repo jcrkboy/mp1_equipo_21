@@ -12,9 +12,9 @@ Curso: Modelos Avanzados de Procesamiento de Lenguaje Natural (MAPLN)
 ---
 
 ## Objetivo del Microproyecto
-Realizar el ajuste fino eficiente (LoRA) de dos modelos de lenguaje de familias distintas (Qwen2.5-1.5B y SmolLM2-1.7B) para la tarea de generacion condicional de codigo en Python a partir de instrucciones en lenguaje natural, evaluando el desempeno funcional mediante la metrica pass@1 sobre el split de prueba de MBPP.
+Realizar el ajuste fino eficiente (LoRA) de dos modelos de lenguaje fundacionales de familias distintas (Qwen2.5-1.5B y SmolLM2-1.7B) para la tarea de generacion condicional de codigo en Python a partir de instrucciones en lenguaje natural, evaluando el desempeno funcional mediante la metrica pass@1 sobre el split de prueba de MBPP (500 problemas).
 
-Se comparan cuatro configuraciones:
+Se comparan cuatro configuraciones bajo decodificacion determinista (greedy, do_sample=False):
 1. Qwen2.5-1.5B (Zero-Shot Baseline)
 2. Qwen2.5-1.5B + LoRA
 3. SmolLM2-1.7B (Zero-Shot Baseline)
@@ -23,32 +23,50 @@ Se comparan cuatro configuraciones:
 ---
 
 ## Dataset: MBPP (google-research-datasets/mbpp, full)
-* Train (~374 problemas): Finetuning con LoRA (enmascaramiento del prompt con labels = -100).
-* Validation (90 problemas): Monitoreo de perdida durante el entrenamiento.
-* Test (500 problemas): Split obligatorio para la evaluacion final con pass@1.
+* Train (374 problemas, 38.8%): Finetuning con LoRA (enmascaramiento estricto del prompt con labels = -100).
+* Validation (90 problemas, 9.3%): Monitoreo de perdida y deteccion de sobreajuste entre epocas.
+* Test (500 problemas, 51.9%): Particion obligatoria y reservada exclusivamente para la evaluacion final con pass@1.
 
 ---
 
-## Evaluacion: Batched Generation (Anexo)
-Para optimizar el tiempo de inferencia sobre los 500 problemas de prueba, se implementa generacion por lotes con:
-* tokenizer.padding_side = "left" (obligatorio para decoder-only).
-* attention_mask para ignorar los tokens de relleno.
+## Evaluacion Oficial: Batched Generation con Sandbox de Ejecucion
+Para optimizar el tiempo de inferencia sobre los 500 problemas de prueba, se implementa generacion por lotes (batch_size=16) conforme al anexo:
+* tokenizer.padding_side = "left" (obligatorio para modelos causales decoder-only).
+* attention_mask para ignorar tokens de relleno.
 * pad_token = eos_token.
-* Recorte vectorizado del prompt con su padding: out[:, inputs["input_ids"].shape[1]:].
-* Decodificacion determinista / greedy (do_sample=False).
+* Recorte vectorizado del prompt: out[:, inputs["input_ids"].shape[1]:].
+* Decodificacion determinista (greedy, do_sample=False).
+* Sandbox de ejecucion con tracer de tiempo limite (timeout = 2.0 s por problema) neutralizando input() y print().
 
 ---
 
-## Notebook del Proyecto
-El notebook principal es PlnMicroproyecto03.ipynb y contiene las 11 secciones obligatorias en el orden exacto de la rubrica:
-1. Portada e introduccion
-2. Librerias
+## Resultados Consolidados: pass@1 en Test (500 problemas de MBPP)
+
+| Configuracion | pass@1 (%) | Problemas Resueltos | Delta vs Base | Factor Mejora |
+| :--- | :---: | :---: | :---: | :---: |
+| 1. Qwen2.5-1.5B (Zero-Shot) | 37.40% | 187 / 500 | Referencia | 1.00x |
+| 2. Qwen2.5-1.5B + LoRA | 23.80% | 119 / 500 | -13.60% | 0.64x |
+| 3. SmolLM2-1.7B (Zero-Shot) | 3.40% | 17 / 500 | Referencia | 1.00x |
+| 4. SmolLM2-1.7B + LoRA | 22.40% | 112 / 500 | +19.00% | 6.59x |
+
+### Conclusiones Principales del Analisis
+1. **SmolLM2-1.7B + LoRA:** Salto extraordinario de +19.00 puntos porcentuales (de 3.40% a 22.40%, mejora de 6.59x). Para este modelo de proposito general, LoRA indujo de manera exitosa la sintaxis de Python y la estructura de retorno requerida por los asserts.
+2. **Qwen2.5-1.5B Zero-Shot:** Desempeno sobresaliente en base (37.40%) gracias a su pre-entrenamiento intensivo en mas de 5.5T tokens de codigo y tareas de infilling.
+3. **Efecto de Sobreajuste en Qwen:** Con 5 epocas sobre solo 374 ejemplos, la perdida en entrenamiento cayo a 0.068 mientras la de validacion subio de 0.62 a 0.90 (+45%), reduciendo el pass@1 en test a 23.80% por olvido catastrofico. En modelos con fuerte conocimiento previo de codigo, se requiere early stopping en la epoca 1 o menor tasa de aprendizaje.
+4. **Eficiencia Parametrica:** LoRA entreno unicamente ~2.07% - 2.28% de los parametros totales en ambas arquitecturas en ~115 segundos por modelo en GPU RTX 4000 Ada.
+
+---
+
+## Estructura del Jupyter Notebook (PlnMicroproyecto03.ipynb)
+El notebook contiene las 11 secciones obligatorias en el orden exacto de la rubrica:
+1. Portada e introduccion (formulacion matematica, metricas y configuraciones)
+2. Librerias (reproducibilidad, verificacion de hardware e imports)
 3. Carga del dataset y exploracion
-4. Construccion de prompts y preprocesamiento
+4. Construccion de prompts y preprocesamiento (Prefix Infilling y labels=-100)
 5. Particiones (train / validation / test)
-6. Implementacion de la evaluacion pass@1
+6. Implementacion de la evaluacion pass@1 (generacion por lotes y sandbox)
 7. Evaluacion de los modelos base (zero-shot)
-8. Finetuning con LoRA
-9. Evaluacion de los modelos finetuneados
-10. Comparacion y resultados
-11. Conclusiones
+8. Finetuning con LoRA (LoraConfig en capas lineales, AdamW, 5 epocas)
+9. Evaluacion de los modelos finetuneados (pass@1 en test)
+10. Comparacion y resultados (tabla de metricas, grafico de barras y analisis cualitativo)
+11. Conclusiones (discusion profunda de resultados, sobreajuste y SLMs)
