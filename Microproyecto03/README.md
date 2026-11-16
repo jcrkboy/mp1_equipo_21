@@ -16,15 +16,15 @@ Realizar el ajuste fino eficiente (LoRA) de dos modelos de lenguaje fundacionale
 
 Se comparan cuatro configuraciones bajo decodificacion determinista (greedy, do_sample=False):
 1. Qwen2.5-1.5B (Zero-Shot Baseline)
-2. Qwen2.5-1.5B + LoRA
+2. Qwen2.5-1.5B + LoRA (Atencion, r=16)
 3. SmolLM2-1.7B (Zero-Shot Baseline)
-4. SmolLM2-1.7B + LoRA
+4. SmolLM2-1.7B + LoRA (Atencion, r=16)
 
 ---
 
 ## Dataset: MBPP (google-research-datasets/mbpp, full)
 * Train (374 problemas, 38.8%): Finetuning con LoRA (enmascaramiento estricto del prompt con labels = -100).
-* Validation (90 problemas, 9.3%): Monitoreo de perdida y deteccion de sobreajuste entre epocas.
+* Validation (90 problemas, 9.3%): Monitoreo de perdida y guardado del mejor punto de control (Early Checkpointing).
 * Test (500 problemas, 51.9%): Particion obligatoria y reservada exclusivamente para la evaluacion final con pass@1.
 
 ---
@@ -45,15 +45,15 @@ Para optimizar el tiempo de inferencia sobre los 500 problemas de prueba, se imp
 | Configuracion | pass@1 (%) | Problemas Resueltos | Delta vs Base | Factor Mejora |
 | :--- | :---: | :---: | :---: | :---: |
 | 1. Qwen2.5-1.5B (Zero-Shot) | 37.40% | 187 / 500 | Referencia | 1.00x |
-| 2. Qwen2.5-1.5B + LoRA | 23.80% | 119 / 500 | -13.60% | 0.64x |
+| 2. Qwen2.5-1.5B + LoRA (Atencion, r=16) | 30.80% | 154 / 500 | -6.60% | 0.82x |
 | 3. SmolLM2-1.7B (Zero-Shot) | 3.40% | 17 / 500 | Referencia | 1.00x |
-| 4. SmolLM2-1.7B + LoRA | 22.40% | 112 / 500 | +19.00% | 6.59x |
+| 4. SmolLM2-1.7B + LoRA (Atencion, r=16) | 23.00% | 115 / 500 | +19.60% | 6.76x |
 
 ### Conclusiones Principales del Analisis
-1. **SmolLM2-1.7B + LoRA:** Salto extraordinario de +19.00 puntos porcentuales (de 3.40% a 22.40%, mejora de 6.59x). Para este modelo de proposito general, LoRA indujo de manera exitosa la sintaxis de Python y la estructura de retorno requerida por los asserts.
+1. **SmolLM2-1.7B + LoRA:** Salto sobresaliente de +19.60 puntos porcentuales (de 3.40% a 23.00%, factor de mejora de 6.76x, resolviendo 98 problemas adicionales). Para este modelo de proposito general, LoRA indujo de manera exitosa la sintaxis de Python y la estructura de retorno requerida por los asserts.
 2. **Qwen2.5-1.5B Zero-Shot:** Desempeno sobresaliente en base (37.40%) gracias a su pre-entrenamiento intensivo en mas de 5.5T tokens de codigo y tareas de infilling.
-3. **Efecto de Sobreajuste en Qwen:** Con 5 epocas sobre solo 374 ejemplos, la perdida en entrenamiento cayo a 0.068 mientras la de validacion subio de 0.62 a 0.90 (+45%), reduciendo el pass@1 en test a 23.80% por olvido catastrofico. En modelos con fuerte conocimiento previo de codigo, se requiere early stopping en la epoca 1 o menor tasa de aprendizaje.
-4. **Eficiencia Parametrica:** LoRA entreno unicamente ~2.07% - 2.28% de los parametros totales en ambas arquitecturas en ~115 segundos por modelo en GPU RTX 4000 Ada.
+3. **Optimizacion con LoRA Ligero en Qwen:** Al restringir los adaptadores a las proyecciones de atencion (q, k, v, o con r=16, alpha=16, solo 0.28% de parametros entrenables) y aplicar early checkpointing, la perdida de validacion descendio saludablemente (0.87 a 0.64) y el pass@1 subio a 30.80% (154 problemas resueltos), mitigando el sobreajuste previo de 23.80%.
+4. **Eficiencia Parametrica:** LoRA entreno unicamente ~0.28% - 0.36% de los parametros totales en ambas arquitecturas en ~65 segundos por modelo en GPU RTX 4000 Ada.
 
 ---
 
@@ -66,7 +66,7 @@ El notebook contiene las 11 secciones obligatorias en el orden exacto de la rubr
 5. Particiones (train / validation / test)
 6. Implementacion de la evaluacion pass@1 (generacion por lotes y sandbox)
 7. Evaluacion de los modelos base (zero-shot)
-8. Finetuning con LoRA (LoraConfig en capas lineales, AdamW, 5 epocas)
+8. Finetuning con LoRA (LoRA ligero en atencion, AdamW, 4 epocas)
 9. Evaluacion de los modelos finetuneados (pass@1 en test)
-10. Comparacion y resultados (tabla de metricas, grafico de barras y analisis cualitativo)
-11. Conclusiones (discusion profunda de resultados, sobreajuste y SLMs)
+10. Comparacion y resultados (tabla dinamica, grafico de barras y analisis cualitativo)
+11. Conclusiones (discusion profunda de resultados, regularizacion y SLMs)
